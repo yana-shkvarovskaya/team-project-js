@@ -1,0 +1,141 @@
+.header {
+  position: relative;
+  height: 200px;
+}
+
+.header__navigation {
+  position: absolute;
+  display: flex;
+  top: 33%;
+  right: 73%;
+}
+
+.drop-btn {
+  position: absolute;
+  width: 200px;
+  background-color: rgba(207, 146, 146, 0.795);
+  color: rgb(59, 7, 7);
+  line-height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.drop-btn.filter {
+  //   position: absolute;
+  right: 8px;
+  width: 200px;
+  //   background-color: rgba(207, 146, 146, 0.795);
+  //   color: rgb(59, 7, 7);
+  //   line-height: 50px;
+  //   padding: 0 20px;
+  //   border-radius: 5px;
+  //   font-size: 20px;
+  //   font-weight: 500;
+  //   cursor: pointer;
+}
+
+.drop-btn i {
+  float: right;
+  line-height: 38px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.wrapper {
+  position: absolute;
+  top: 65px;
+  display: none;
+  //   display: flex;
+  width: 200px;
+  background-color: rgba(207, 146, 146, 0.795);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 2s;
+}
+
+.wrapper.show {
+  display: flex;
+  transition: 2s;
+}
+
+.wrapper.filter {
+  position: absolute;
+  top: 66px;
+  right: -285px;
+  display: none;
+  width: 494px;
+  background-color: rgba(207, 146, 146, 0.795);
+  border-radius: 5px;
+}
+
+.wrapper.filter.show {
+  display: flex;
+  transition: 2s;
+}
+
+.wrapper ul {
+  list-style: none;
+  width: 500px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu-bar.filter {
+  display: flex;
+  padding: 10px;
+  width: 600px;
+  margin: -5px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-item {
+  margin: 5px;
+  width: 150px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: darkviolet;
+}
+.wrapper.sort .rating-item,
+.wrapper.sort .release-item {
+  display: none;
+}
+
+.wrapper ul li {
+  text-decoration: none;
+  color: rgb(59, 7, 7);
+  line-height: 55px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darkorchid;
+  }
+}
+
+.wrapper li i {
+  float: right;
+  line-height: 55px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.wrapper li .fa-chevron-left {
+  float: left;
+  margin-right: 5px;
+}
+
+.hide {
+  display: none;
+}

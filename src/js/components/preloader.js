@@ -1,4 +1,8 @@
-const preloader = document.querySelector('.preloader');
+// const preloader = document.querySelector('.preloader');
+
+import getRefs from '../refs';
+
+const { preloader } = getRefs();
 
 // if (document.documentElement.hasAttribute('data-theme')) {
 //         preloader.style.background = "gray";

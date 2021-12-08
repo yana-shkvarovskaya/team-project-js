@@ -1,4 +1,7 @@
-const topBtn = document.querySelector('.scroll-top');
+// const topBtn = document.querySelector('.scroll-top');
+import getRefs from '../refs';
+
+const { topBtn } = getRefs();
 
 topBtn.addEventListener('click', scrollToTop);
 window.addEventListener('scroll', onScroll);

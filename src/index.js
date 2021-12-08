@@ -1,4 +1,9 @@
 import './sass/main.scss';
+import './js/API/API-service';
+import './js/components/drop-down';
+import './js/components/filter';
+import './js/components/search';
+import './js/data/create-card-data';
 import './js/team-modal';
 import './js/refs';
 import './js/components/preloader';
