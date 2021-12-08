@@ -21,6 +21,7 @@ function showWrapperSort() {
 
 function showRatingSort() {
   menuBar.style.marginLeft = '-200px';
+
   setTimeout(() => {
     ratingItem.style.display = 'block';
   }, 100);
