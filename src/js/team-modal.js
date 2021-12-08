@@ -1,4 +1,3 @@
-
 import teamModalTpl from '../templates/teamModal.hbs';
 import teamData from './data/team';
 import getRefs from './refs';
