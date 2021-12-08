@@ -1,25 +1,16 @@
-// import API from '../API/api-service';
 import card from '../../templates/cardMovie';
-// import createCardData from '../data/create-card-data';
+import API from '../API/api-service';
+import searchErr from './search-error';
+import { startSpinner, stopSpinner } from './preloader';
 
 const refs = {
-  searchForm: document.querySelector('.search-form'),
-  //   searchInput: document.querySelector('.search-input'),
-  //   searchBtn: document.querySelector('.search-btn'),
-  //   imagesContainer: document.querySelector('.gallery'),
+  searchForm: document.querySelector('.header__search-form'),
   insertPoint: document.querySelector('.hero__list'),
+  preloader: document.querySelector('.preloader'),
 };
-
-// import getRefs from '../refs/get-refs';
-import API from '../API/api-service';
-// import searchErr from './search-error';
-// import card from '../../handlebars/cardMovie.hbs';
-// import renderPagination from './pages';
-// const { searchForm, insertPoint } = getRefs();
 
 const api = new API();
 
-// import { startSpinner, stopSpinner } from './spinner.js';
 import createCardData from '../data/create-card-data';
 
 refs.searchForm.addEventListener('submit', onSearchInput);
@@ -32,20 +23,19 @@ async function onSearchInput(e) {
 
   try {
     api.setQuery(value);
-    // startSpinner();
+    startSpinner();
     const data = await api.fetchMovieSearchQuery();
     console.log(data);
     const result = await data.results;
     console.log(result);
     const markup = await createCardData(result);
     if (!result.length) {
-      //   searchErr(true);
-      //   stopSpinner();
+      searchErr(true);
+      stopSpinner();
       return;
     }
     refs.insertPoint.insertAdjacentHTML('beforeend', card(markup));
-    // renderPagination('searchQuery', data.total_pages, value);
-    // stopSpinner();
+    stopSpinner();
   } catch (error) {
     console.error(error);
   }
@@ -53,6 +43,6 @@ async function onSearchInput(e) {
 
 function initialReset() {
   refs.insertPoint.innerHTML = '';
-  //   searchErr(false);
+  searchErr(false);
   api.setPage(1);
 }

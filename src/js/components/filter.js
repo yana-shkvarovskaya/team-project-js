@@ -5,24 +5,21 @@ import API from '../API/api-service';
 const api = new API();
 
 const refs = {
-  decrBtn: document.querySelector('.increase-btn'),
-  incrBtn: document.querySelector('.decrease-btn'),
-  releaseDecrBtn: document.querySelector('.asc-btn'),
-  releaseIncrBtn: document.querySelector('.desc-btn'),
+  decrBtn: document.querySelector('.header__increase-btn'),
+  incrBtn: document.querySelector('.header__decrease-btn'),
+  releaseDecrBtn: document.querySelector('.header__asc-btn'),
+  releaseIncrBtn: document.querySelector('.header__desc-btn'),
   nav: document.querySelector('#nav'),
-  menuWrapper: document.querySelector('.wrapper.sort'),
-  menuBar: document.querySelector('.menu-bar'),
-  ratingItem: document.querySelector('.rating-item'),
-  releaseItem: document.querySelector('.release-item'),
-  filterList: document.querySelector('.menu-bar.filter'),
-  filterItems: document.querySelectorAll('.gallery__item'),
+  menuWrapper: document.querySelector('.header__wrapper'),
+  menuBar: document.querySelector('.header__menu-bar'),
+  ratingItem: document.querySelector('.header__rating-item'),
+  releaseItem: document.querySelector('.header__release-item'),
 };
 
 refs.decrBtn.addEventListener('click', sortDecrement);
 refs.incrBtn.addEventListener('click', sortIncrement);
 refs.releaseDecrBtn.addEventListener('click', sortReleaseDecrement);
 refs.releaseIncrBtn.addEventListener('click', sortReleaseIncrement);
-// refs.genreItem.addEventListener('click', filterMoviesByGenre);
 
 const values = refs.nav.children;
 
@@ -96,51 +93,3 @@ function sortReleaseIncrement() {
 function insertAfter(elem, refElem) {
   return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
-
-function filter() {
-  refs.filterList.addEventListener('click', event => {
-    const targetId = event.target.dataset.filter;
-    console.log(targetId);
-
-    switch (targetId) {
-      case 'Action':
-        refs.filterItems.forEach(filterItem => {
-          console.log(filterItem);
-          if (filterItem.classList.contains('Action')) {
-            filterItem.style.display = 'block';
-          } else {
-            filterItem.style.display = 'none';
-          }
-        });
-        break;
-    }
-  });
-}
-
-filter();
-// async function filter(result) {
-//   const genres = await api.fetchMovieGenre();
-
-//   let cardList = [];
-
-//   cardList = result.map(
-//     ({ genre_ids, release_date, backdrop_path, poster_path, title, vote_average, id }) => {
-//       const genres_type = [];
-
-//       // console.log(genre_ids);
-
-//       genre_ids.forEach(id => {
-//         const genre = genres.find(genre => genre.id === id);
-
-//         genres_type.push(genre.name);
-//         // console.log(genre.name);
-//         if (genre.name === 'Drama') {
-//           console.log('success');
-//         } else {
-//           console.log('errorr');
-//         }
-//       });
-//     },
-//   );
-//   console.log(cardList);
-// }

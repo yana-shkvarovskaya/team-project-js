@@ -1,6 +1,3 @@
-// const nightModeBtn = document.querySelector('.night-mode-btn');
-// const lightIcon = document.querySelector('.fa-sun');
-// const darkIcon = document.querySelector('.fa-moon');
 
 import getRefs from '../refs';
 

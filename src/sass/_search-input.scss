@@ -1,4 +1,4 @@
-.search-form {
+.header__search-form {
   display: flex;
   // background-color: rgb(149, 159, 252);
   padding: 26px 0px 18px 0px;
@@ -9,7 +9,7 @@
   // width: 100%;
 }
 
-.search-input {
+.header__search-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 5px 10px;
   border-radius: 4px;
@@ -17,7 +17,7 @@
   outline: none;
 }
 
-.search-btn {
+.header__search-btn {
   margin-left: 10px;
   color: black;
   background-color: white;

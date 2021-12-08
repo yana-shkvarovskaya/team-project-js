@@ -1,9 +1,9 @@
 
 {{#each this}}
-<li class="gallery__item {{genres_type}}" data-id='{{id}}' data-rate='{{vote_average}}' data-release='{{date}}' data-genres="{{genres_type}}">
+<li class="gallery__item {{genres_type}}" data-id='{{id}}' data-rate='{{vote_average}}' data-release='{{date}}'>
    {{!-- <div class="hero__imagebox vote-average__position"> --}}
    <img class="gallery__image" src={{poster}} alt="{{title}}" data-src="{{id}}">
-   <span class="gallery--avg gallery__value gallery__position">{{vote_average}}</span>
+   <span class="gallery__item__rating">{{vote_average}}</span>
    {{!-- </div> --}}
    <div class="gallery__item__description">
    <h2 class="gallery__item__title">{{title}}</h1>

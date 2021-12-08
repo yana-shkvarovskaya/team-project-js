@@ -1,4 +1,3 @@
-// const topBtn = document.querySelector('.scroll-top');
 import getRefs from '../refs';
 
 const { topBtn } = getRefs();

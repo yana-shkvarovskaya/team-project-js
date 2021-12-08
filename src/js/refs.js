@@ -1,7 +1,7 @@
 export default function getRefs() {
   return {
     // --- Header ---
-
+    textError: document.querySelector('.header__search-error'),
     // --- Modal ---
 
     // --- Pages (pagination) ---

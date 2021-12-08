@@ -5,6 +5,10 @@
 :root[data-theme='dark'] {
   background-color: rgb(34, 29, 8);
   color: white;
+
+  .preloader {
+    background: rgb(39, 35, 35);
+  }
 }
 
 .night-mode-btn {
