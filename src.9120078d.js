@@ -105,4 +105,4 @@ module.exports="/team-project-js/Evgeniya_Gorlach.bdca21ec.jpg";
 },{"../refs":"VyiV"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/components/drop-down"),require("./js/components/filter"),require("./js/components/search"),require("./js/team-modal"),require("./js/refs"),require("./js/components/preloader"),require("./js/components/scroll-top"),require("./js/components/night-mode");
 },{"./sass/main.scss":"clu1","./js/components/drop-down":"Ap0W","./js/components/filter":"ICh5","./js/components/search":"A7jH","./js/team-modal":"SVxB","./js/refs":"VyiV","./js/components/preloader":"meUZ","./js/components/scroll-top":"rjfz","./js/components/night-mode":"boK5"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-project-js/src.f704882d.js.map
+//# sourceMappingURL=/team-project-js/src.9120078d.js.map
