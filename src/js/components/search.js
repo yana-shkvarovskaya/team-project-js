@@ -5,7 +5,7 @@ import { startSpinner, stopSpinner } from './preloader';
 
 const refs = {
   searchForm: document.querySelector('.header__search-form'),
-  insertPoint: document.querySelector('.hero__list'),
+  insertPoint: document.querySelector('.gallery__list'),
   preloader: document.querySelector('.preloader'),
 };
 
