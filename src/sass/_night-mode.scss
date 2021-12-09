@@ -1,9 +1,28 @@
-// :root {
-//   background-color: cornsilk;
-// }
+:root {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // background: -webkit-linear-gradient(90deg, #edefee, #c9c9c9);
+  // background: linear-gradient(90deg, #edefee, #c9c9c9);
+}
 
 :root[data-theme='dark'] {
   background-color: rgb(34, 29, 8);
+  // background: #1e130c;
+  // background: -webkit-linear-gradient(to right, #9a8478, #1e130c);
+  // background: linear-gradient(to right, #9a8478, #1e130c);
+
+  // background: #1d4350;
+  // background: -webkit-linear-gradient(to right, #a43931, #1d4350);
+  // background: linear-gradient(to right, #a43931, #1d4350);
+
+  background: -webkit-linear-gradient(90deg, #222333, #907578);
+  background: linear-gradient(90deg, #222333, #907578);
   color: white;
 
   .preloader {
