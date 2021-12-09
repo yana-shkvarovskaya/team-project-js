@@ -18,7 +18,7 @@ export default class API {
   async fetchMovieTrending() {
     try {
       const response = await axios.get(`/trending/movie/day?page=${this.page}`);
-      // console.log(response.data);
+      return response;
     } catch (error) {
       console.error(error);
     }
