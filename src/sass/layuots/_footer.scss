@@ -67,6 +67,22 @@
   margin: 0 5px 0 5px;
 }
 
+.footer-go {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+    sans-serif;
+  color: black;
+  font-weight: 600;
+  margin-right: -4px;
+}
+
+.footer-it {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+    sans-serif;
+  color: rgb(230, 105, 22);
+  font-weight: 600;
+  margin-right: 4px;
+}
+
 .btn-animate {
   cursor: pointer;
   background-color: Transparent;
@@ -80,5 +96,23 @@
     transform: scale(1.01);
     color: rgba(255, 13, 190, 0.884);
     text-shadow: 3px 3px 5px rgb(220, 86, 198);
+
+    animation: shake 500ms ease-in-out forwards;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
