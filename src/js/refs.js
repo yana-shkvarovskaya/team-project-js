@@ -2,6 +2,9 @@ export default function getRefs() {
   return {
     // --- Header ---
     textError: document.querySelector('.header__search-error'),
+
+    // --- GALLERY ---
+    insertPoint: document.querySelector('.gallery__list'),
     // --- Modal ---
 
     // --- Pages (pagination) ---
