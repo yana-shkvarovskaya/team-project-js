@@ -2,6 +2,9 @@ export default function getRefs() {
   return {
     // --- Header ---
     textError: document.querySelector('.header__search-error'),
+    btnWatched: document.querySelector('#btn-watched'),//
+    btnQueue: document.querySelector('#btn-queue'),//
+ 
 
     // --- GALLERY ---
     insertPoint: document.querySelector('.gallery__list'),

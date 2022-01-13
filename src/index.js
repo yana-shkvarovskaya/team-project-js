@@ -10,3 +10,4 @@ import './js/components/scroll-top';
 import './js/components/night-mode';
 
 import './js/components/modal';
+import './js/components/library';
