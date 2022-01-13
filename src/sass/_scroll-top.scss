@@ -67,11 +67,7 @@ html {
   inset: 0;
   border-radius: 50%;
   filter: blur(5px);
-  background: linear-gradient(
-    var(--black-text-color),
-    var(--accent-color),
-    var(--footer-text-color)
-  );
+  background: linear-gradient($black-text-color, $accent-color, $footer-text-color);
   animation: animate 1s linear infinite;
   overflow: hidden;
 }
@@ -99,8 +95,8 @@ html {
 
 .rocket .fa-rocket {
   position: absolute;
-  color: #ff6b08;
-  // opacity: 80%;
+  color: $accent-color;
+  opacity: 80%;
   font-size: 1.7em;
   -webkit-text-stroke: 1px #000;
   animation: animateRocket 0.2s linear infinite;
