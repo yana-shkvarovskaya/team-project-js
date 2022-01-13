@@ -58,21 +58,21 @@ html {
 //   }
 
 //Стили контейнера
-//   .container{
-//     margin: 0 auto;
-//     padding: 0 20px;
-//     width: 100%;
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 
-//       @media screen and (min-width: 768px) {
-//         width: 768px;
-//         padding: 0 34px;
-//       }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 0 75px;
+  }
 
-//       @media screen and (min-width: 1280px) {
-//         padding: 0 112px;
-//         width:  1280px;
-//       }
-//   }
+  @media screen and (min-width: 1024px) {
+    padding: 0 71px;
+    width: 1024px;
+  }
+}
 
 // Сбрасываем стили спискам
 ul {
