@@ -6,7 +6,10 @@ export default function getRefs() {
     // --- GALLERY ---
     insertPoint: document.querySelector('.gallery__list'),
     // --- Modal ---
-
+    modalСardRef: document.querySelector('.modal-form__card'),//modal.html
+    overlayRef: document.querySelector('.overlay'),//modal.html
+    overlayBackgroundRef: document.querySelector('.overlay__bg'),//modal.html
+    clsBtnRef: document.querySelector('.modal-form__close-btn'),//modal.html
     // --- Pages (pagination) ---
 
     // ---SCROLL-TOP---
@@ -26,3 +29,6 @@ export default function getRefs() {
     btnCloseModal: document.querySelector('.close'),
   };
 }
+
+
+
