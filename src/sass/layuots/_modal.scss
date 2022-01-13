@@ -58,59 +58,59 @@
     width: 882px;
     height: 568px;
   }
-  &.light-theme {
-    background-image: linear-gradient(rgb(255, 255, 255, 0.7), rgb(255, 255, 255, 0.9));
-  }
-  &.dark-theme {
-    background-image: linear-gradient(rgba(50, 50, 50, 0.7), rgb(50, 50, 50, 0.9));
-  }
-  &.light-theme .card__name {
-    color: var(--black-text-color);
-  }
-  &.dark-theme .card__name {
-    color: var(--white-text-color);
-  }
-  &.light-theme .parameter__value,
-  &.light-theme .card__about-caption,
-  &.light-theme .card__about,
-  &.light-theme .mobile-about-caption,
-  &.light-theme .mobile-about {
-    color: var(--black-text-color);
-    font-weight: 500;
-  }
-  &.dark-theme .parameter__value,
-  &.dark-theme .card__about-caption,
-  &.dark-theme .card__about,
-  &.dark-theme .mobile-about-caption,
-  &.dark-theme .mobile-about,
-  &.dark-theme .modal-form__btn {
-    color: $white-text-color;
-    font-weight: 400;
-  }
-  &.light-theme .modal-form__btn {
-    color: $black-text-color;
-    border: 1px solid $black-text-color;
-  }
-  &.dark-theme .modal-form__btn {
-    color: $white-text-color;
-    border: 1px solid $white-text-color;
-  }
-  &.light-theme .modal-form__close-btn {
-    background-color: transparent;
-  }
-  &.dark-theme .modal-form__close-btn {
-    background-color: $white-text-color;
-  }
-  &.light-theme .btn--active,
-  &.dark-theme .btn--active {
-    border: none;
-    background-color: $accent-color;
-    color: $white-text-color;
-  }
-  &.light-theme .parameter__value--avg,
-  &.dark-theme .parameter__value--avg {
-    color: $white-text-color;
-  }
+  // &.light-theme {
+  //   background-image: linear-gradient(rgb(255, 255, 255, 0.7), rgb(255, 255, 255, 0.9));
+  // }
+  // &.dark-theme {
+  //   background-image: linear-gradient(rgba(50, 50, 50, 0.7), rgb(50, 50, 50, 0.9));
+  // }
+  // &.light-theme .card__name {
+  //   color: var(--black-text-color);
+  // }
+  // &.dark-theme .card__name {
+  //   color: var(--white-text-color);
+  // }
+  // &.light-theme .parameter__value,
+  // &.light-theme .card__about-caption,
+  // &.light-theme .card__about,
+  // &.light-theme .mobile-about-caption,
+  // &.light-theme .mobile-about {
+  //   color: var(--black-text-color);
+  //   font-weight: 500;
+  // }
+  // &.dark-theme .parameter__value,
+  // &.dark-theme .card__about-caption,
+  // &.dark-theme .card__about,
+  // &.dark-theme .mobile-about-caption,
+  // &.dark-theme .mobile-about,
+  // &.dark-theme .modal-form__btn {
+  //   color: $white-text-color;
+  //   font-weight: 400;
+  // }
+  // &.light-theme .modal-form__btn {
+  //   color: $black-text-color;
+  //   border: 1px solid $black-text-color;
+  // }
+  // &.dark-theme .modal-form__btn {
+  //   color: $white-text-color;
+  //   border: 1px solid $white-text-color;
+  // }
+  // &.light-theme .modal-form__close-btn {
+  //   background-color: transparent;
+  // }
+  // &.dark-theme .modal-form__close-btn {
+  //   background-color: $white-text-color;
+  // }
+  // &.light-theme .btn--active,
+  // &.dark-theme .btn--active {
+  //   border: none;
+  //   background-color: $accent-color;
+  //   color: $white-text-color;
+  // }
+  // &.light-theme .parameter__value--avg,
+  // &.dark-theme .parameter__value--avg {
+  //   color: $white-text-color;
+  // }
 }
 
 .modal-form__close-btn {
