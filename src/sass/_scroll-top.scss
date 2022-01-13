@@ -106,7 +106,7 @@ html {
 .rocket .fa-rocket {
   position: absolute;
   color: $accent-color;
-  opacity: 80%;
+  // opacity: 80%;
   font-size: 1.4em;
   -webkit-text-stroke: 1px #000;
   animation: animateRocket 0.2s linear infinite;
