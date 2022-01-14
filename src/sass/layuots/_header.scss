@@ -94,3 +94,67 @@
 .is-hidden {
   display: none;
 }
+
+// -----------------------------------------------
+.header__background {
+  width: 100vw;
+  height: 230px;
+  background-image: url('../images/header-img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 60px;
+}
+.header__container {
+  padding-top: 41px;
+  padding-bottom: 97px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.header__pages {
+  display: inline-flex;
+}
+.header__logo {
+  display: inline-flex;
+  font-family: Roboto;
+  align-items: center;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  color: #ffffff;
+
+  &::before {
+    content: '';
+
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/film.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.header__title {
+  display: flex;
+  font-family: Roboto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.header__item:not(:last-child) {
+  margin-right: 39px;
+}
+
+// .header__icon {
+//   fill: red;
+// }
