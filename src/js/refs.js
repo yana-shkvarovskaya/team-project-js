@@ -2,11 +2,17 @@ export default function getRefs() {
   return {
     // --- Header ---
     textError: document.querySelector('.header__search-error'),
+    btnWatched: document.querySelector('#btn-watched'),//
+    btnQueue: document.querySelector('#btn-queue'),//
+ 
 
     // --- GALLERY ---
-    insertPoint: document.querySelector('.gallery__list'),
+    galleryList: document.querySelector('.gallery__list'),
     // --- Modal ---
-
+    modalСardRef: document.querySelector('.modal-form__card'),//modal.html
+    overlayRef: document.querySelector('.overlay'),//modal.html
+    overlayBackgroundRef: document.querySelector('.overlay__bg'),//modal.html
+    clsBtnRef: document.querySelector('.modal-form__close-btn'),//modal.html
     // --- Pages (pagination) ---
 
     // ---SCROLL-TOP---
@@ -26,3 +32,6 @@ export default function getRefs() {
     btnCloseModal: document.querySelector('.close'),
   };
 }
+
+
+

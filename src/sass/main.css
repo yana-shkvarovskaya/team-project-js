@@ -4,16 +4,73 @@
  * Все паршалы подключаются сюда.
  */
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-:root {
-  --black-text-color: #000000;
-  --white-text-color: #ffffff;
-  --accent-color: #ff6b08;
-  --footer-text-color: #545454;
-  --modal-text-color: #8c8c8c;
-  --modal-transition-delay: 500ms;
-  --default-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-  --error-text-color: #ff001b;
-  --secondary-bg-color: #f7f7f7;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 75px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 71px;
+    width: 1024px;
+  }
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+textarea {
+  resize: none;
 }
 
 .header {
@@ -140,24 +197,12 @@
   outline: none;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 20px;
-  min-width: 320px;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 0 71px;
-  }
-}
-
 .gallery {
   margin-bottom: 70px;
 }
 .gallery__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   list-style-type: none;
   margin-bottom: 70px;
 }
@@ -165,12 +210,16 @@
   .gallery__list {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: -30px;
+    margin: -15px -15px 70px;
   }
 }
 .gallery__item {
   margin-bottom: 30px;
   width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .gallery__item:hover, .gallery__item:focus {
@@ -178,13 +227,13 @@
 }
 @media screen and (min-width: 768px) {
   .gallery__item {
-    margin: 30px;
-    width: calc((100% - 4 * 30px) / 2);
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
   }
 }
 @media screen and (min-width: 1024px) {
   .gallery__item {
-    width: calc((100% - 6 * 30px) / 3);
+    width: calc((100% - 6 * 15px) / 3);
     max-width: 500px;
   }
 }
@@ -196,13 +245,14 @@
 }
 .gallery__item__description {
   padding: 20px 5px 20px;
-  background-color: white;
+  background-color: transparent;
+  border: none;
 }
 .gallery__item__title {
   margin-bottom: 5px;
   font-family: Roboto;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
   color: #000000;
@@ -214,7 +264,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
   color: #ff6b08;
 }
@@ -252,14 +302,14 @@
 /* PRELOADER */
 .preloader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 45%;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  text-align: center;
+  background: transparent;
 }
 
 .preloader.hidden {
@@ -288,6 +338,65 @@
     opacity: 0;
   }
 }
+.spinner-box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.pulse-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pulse-bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff6b08;
+}
+
+.pulse-bubble-1 {
+  -webkit-animation: pulse 0.4s ease 0s infinite alternate;
+          animation: pulse 0.4s ease 0s infinite alternate;
+}
+
+.pulse-bubble-2 {
+  -webkit-animation: pulse 0.4s ease 0.2s infinite alternate;
+          animation: pulse 0.4s ease 0.2s infinite alternate;
+}
+
+.pulse-bubble-3 {
+  -webkit-animation: pulse 0.4s ease 0.4s infinite alternate;
+          animation: pulse 0.4s ease 0.4s infinite alternate;
+}
+
+/* KEYFRAMES */
+@-webkit-keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -301,10 +410,16 @@ html {
 .scroll-top {
   position: fixed;
   display: flex;
-  bottom: 70px;
-  right: 70px;
+  bottom: 20px;
+  right: 20px;
   overflow: hidden;
   transition: 1s;
+}
+@media screen and (min-width: 768px) {
+  .scroll-top {
+    bottom: 40px;
+    right: 40px;
+  }
 }
 
 .scroll-top.hide {
@@ -313,13 +428,19 @@ html {
 
 .scroll-top span {
   position: relative;
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   background: #eaeef0;
   border: 0.6px solid #eaeef0;
   border-radius: 50%;
   box-shadow: -0.8px -0.8px 1.5px white, -0.8px -0.8px 2.5px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .scroll-top span {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .scroll-top span::before {
@@ -346,7 +467,7 @@ html {
   inset: 0;
   border-radius: 50%;
   filter: blur(5px);
-  background: linear-gradient(var(--black-text-color), var(--accent-color), var(--footer-text-color));
+  background: linear-gradient(#000000, #ff6b08, #545454);
   -webkit-animation: animate 1s linear infinite;
           animation: animate 1s linear infinite;
   overflow: hidden;
@@ -384,7 +505,7 @@ html {
 .rocket .fa-rocket {
   position: absolute;
   color: #ff6b08;
-  font-size: 1.7em;
+  font-size: 1.4em;
   -webkit-text-stroke: 1px #000;
   -webkit-animation: animateRocket 0.2s linear infinite;
           animation: animateRocket 0.2s linear infinite;

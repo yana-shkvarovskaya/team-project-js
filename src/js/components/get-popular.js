@@ -3,28 +3,32 @@ import getRefs from '../refs';
 import card from '../../templates/cardMovie';
 import createCardData from '../data/create-card-data';
 import { startSpinner, stopSpinner } from './preloader';
-/* import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css'
- */
+import Pagination from 'tui-pagination';
+import 'tui-pagination/dist/tui-pagination.css';
 
-const { insertPoint } = getRefs();
+const { galleryList } = getRefs();
+export let currentPage = 1;
 
 const api = new API();
 
 async function createMarkup() {
+  window.scroll(0, 0);
   startSpinner();
+
   try {
     const data = await api.fetchMovieTrending();
     const result = await data.data;
     const results = await result.results;
     const markup = await createCardData(results);
-
-    insertPoint.insertAdjacentHTML('beforeend', card(markup));
+    galleryList.insertAdjacentHTML('beforeend', card(markup));
+    container.classList.remove('visually-hidden');
+    console.log(markup);
 
     // let request = 'home';
     // renderPagination(request, result.total_pages);
 
     stopSpinner();
+
     // homeLink.classList.add('active');
     // libraryLink.classList.remove('active');
     // headerForm.classList.remove('disabled');
@@ -36,7 +40,11 @@ async function createMarkup() {
 
 createMarkup();
 
-/* const container = document.getElementById('pagination');
+function clearGallery() {
+  galleryList.innerHTML = '';
+}
+
+const container = document.getElementById('tui-pagination-container');
 const options = {
   totalItems: 20000,
   itemsPerPage: 20,
@@ -66,6 +74,10 @@ const options = {
 const pagination = new Pagination(container, options);
 
 pagination.on('afterMove', event => {
-  const currentPage = event.page;
+  container.classList.add('visually-hidden');
+  clearGallery();
+  currentPage = event.page;
   console.log(currentPage);
-}); */
+  createMarkup();
+  return currentPage;
+});
