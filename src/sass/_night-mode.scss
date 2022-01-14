@@ -37,6 +37,9 @@
   .footer-wrapper {
     background: linear-gradient(90deg, #312d2d 20%, #553a3a 50%, #1b1919 80%);
   }
+  .gallery__item__title {
+    color: $white-text-color;
+  }
 }
 
 .night-mode-btn {
