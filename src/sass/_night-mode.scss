@@ -45,8 +45,13 @@
     color: $white-text-color;
   }
 
+  .scroll-top span {
+    border: 0.6px solid #3b3232;
+  }
+
   .scroll-top span::after {
     background: #280d0d;
+    border: 1px solid #3b3232;
   }
 
   .fa-cloud {
