@@ -4,7 +4,7 @@ import card from '../../templates/cardMovie';
 import createCardData from '../data/create-card-data';
 import { startSpinner, stopSpinner } from './preloader';
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
+
 
 const { galleryList } = getRefs();
 export let currentPage = 1;
