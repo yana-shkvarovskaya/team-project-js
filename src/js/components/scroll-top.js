@@ -13,7 +13,7 @@ function onScroll() {
   }
 }
 
-function scrollToTop() {
+export default function scrollToTop() {
   window.scroll(0, 0);
   topBtn.style.transform = 'translate(0, -700px)';
   setTimeout(function () {

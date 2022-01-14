@@ -12,20 +12,23 @@ export let currentPage = 1;
 const api = new API();
 
 async function createMarkup() {
+  window.scroll(0, 0);
   startSpinner();
+
   try {
     const data = await api.fetchMovieTrending();
     const result = await data.data;
     const results = await result.results;
-
     const markup = await createCardData(results);
-    console.log(markup);
     galleryList.insertAdjacentHTML('beforeend', card(markup));
+    container.classList.remove('visually-hidden');
+    console.log(markup);
 
     // let request = 'home';
     // renderPagination(request, result.total_pages);
 
     stopSpinner();
+
     // homeLink.classList.add('active');
     // libraryLink.classList.remove('active');
     // headerForm.classList.remove('disabled');
@@ -71,6 +74,7 @@ const options = {
 const pagination = new Pagination(container, options);
 
 pagination.on('afterMove', event => {
+  container.classList.add('visually-hidden');
   clearGallery();
   currentPage = event.page;
   console.log(currentPage);
