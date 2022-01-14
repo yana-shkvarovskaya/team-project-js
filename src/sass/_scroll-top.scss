@@ -107,8 +107,8 @@ html {
   position: absolute;
   color: $accent-color;
   // opacity: 80%;
-  font-size: 1.4em;
-  -webkit-text-stroke: 1px #000;
+  font-size: 1.5em;
+  -webkit-text-stroke: 0.5px rgb(53, 46, 46);
   animation: animateRocket 0.2s linear infinite;
   overflow: hidden;
 }

@@ -34,11 +34,23 @@
     background-image: linear-gradient(rgba(92, 90, 90, 0.5), rgba(68, 64, 64, 0.8));
   }
 
+  .overlay.is-open {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .footer-wrapper {
     background: linear-gradient(90deg, #312d2d 20%, #553a3a 50%, #1b1919 80%);
   }
   .gallery__item__title {
     color: $white-text-color;
+  }
+
+  .scroll-top span::after {
+    background: #280d0d;
+  }
+
+  .fa-cloud {
+    color: #b39b9b;
   }
 }
 
