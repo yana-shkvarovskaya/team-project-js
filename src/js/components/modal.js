@@ -5,7 +5,7 @@ import getTrailer from './get-trailer'; //добавляет ютуб ролик
 // import { currentStorage, changeStorage } from './library';
 
 const {
-  insertPoint,
+  galleryList,
   modalRef,
   modalСardRef,
   overlayBackgroundRef,
@@ -16,7 +16,7 @@ const {
 } = getRefs();
 let movieID;
 
-insertPoint.addEventListener('click', onClickOnCard);
+galleryList.addEventListener('click', onClickOnCard);
 //Вешаем слушатели на кнопки
 modalСardRef.addEventListener('click', onModalBtnClick);
 
