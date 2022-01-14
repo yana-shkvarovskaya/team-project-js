@@ -165,7 +165,7 @@
   .gallery__list {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: -30px;
+    margin: -30px -30px 70px;
   }
 }
 .gallery__item {

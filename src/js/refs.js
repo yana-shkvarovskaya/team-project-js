@@ -4,7 +4,7 @@ export default function getRefs() {
     textError: document.querySelector('.header__search-error'),
 
     // --- GALLERY ---
-    insertPoint: document.querySelector('.gallery__list'),
+    galleryList: document.querySelector('.gallery__list'),
     // --- Modal ---
 
     // --- Pages (pagination) ---
