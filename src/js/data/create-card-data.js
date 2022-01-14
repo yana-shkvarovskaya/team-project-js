@@ -7,6 +7,7 @@ async function createCardData(result) {
   const genres = await api.fetchMovieGenre();
 
   let cardList = [];
+  console.log(result);
 
   cardList = result.map(
     ({ genre_ids, release_date, backdrop_path, poster_path, title, vote_average, id }) => {
@@ -18,6 +19,11 @@ async function createCardData(result) {
         const genre = genres.find(genre => genre.id === id);
 
         genres_type.push(genre.name);
+
+        if (genres_type.length > 2) {
+          return genres_type.splice(2, genres_type.length - 2, ' Other');
+        }
+
         // console.log(genre.name);
       });
 
