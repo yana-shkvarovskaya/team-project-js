@@ -1,4 +1,6 @@
 import ACCESS from './api-authorization';
+import apiAuthorization from './api-authorization';
+import {currentPage} from '../components/get-popular'
 
 const axios = require('axios').default;
 
@@ -17,7 +19,7 @@ export default class API {
   // Информация о трендовых фильмах
   async fetchMovieTrending() {
     try {
-      const response = await axios.get(`/trending/movie/day?page=${this.page}`);
+      const response = await axios.get(`/trending/movie/day?page=${currentPage}`);
       return response;
     } catch (error) {
       console.error(error);
