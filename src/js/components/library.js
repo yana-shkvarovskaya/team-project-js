@@ -3,40 +3,42 @@ import card from '../../templates/cardMovie.hbs';
 
 export let currentStorage;
 const {
-  //   libraryLink,
-  //   homeLink,
+  libraryLink,
+  homeLink,
   btnWatched,
   btnQueue,
-  //   header,
-  //   headerForm,
-  //   headerButton,
+  header,
+  headerForm,
+  headerButton,
   galleryList,
 } = getRefs();
 
 btnWatched.addEventListener('click', watchedStorage);
 btnQueue.addEventListener('click', queuedStorage);
-// libraryLink.addEventListener('click', openLibrary);
+libraryLink.addEventListener('click', openLibrary);
 
-// function openLibrary() {
-//   insertPoint.innerHTML = '';
-//   header.classList.replace('header__background-home', 'header__background-library');
-//   homeLink.classList.remove('active');
-//   libraryLink.classList.add('active');
-//   headerForm.classList.add('disabled');
-//   headerButton.classList.remove('disabled');
-// }
+function openLibrary() {
+  galleryList.innerHTML = '';
+  header.classList.replace('header__background-home', 'header__background-library');
+  homeLink.classList.remove('active');
+  libraryLink.classList.add('active');
+  headerForm.classList.add('disabled');
+  headerButton.classList.remove('disabled');
+  btnQueue.classList.add('in-active');
+  queuedStorage();
+}
 function watchedStorage() {
   changeStorage('Watched');
   currentStorage = 'Watched';
-  //   btnQueue.classList.remove('in-active');
-  //   btnWatched.classList.add('in-active');
+  btnQueue.classList.remove('in-active');
+  btnWatched.classList.add('in-active');
 }
 
 function queuedStorage() {
   changeStorage('Queue');
   currentStorage = 'Queue';
-  //   btnWatched.classList.remove('in-active');
-  //   btnQueue.classList.add('in-active');
+  btnWatched.classList.remove('in-active');
+  btnQueue.classList.add('in-active');
 }
 
 export function changeStorage(value) {

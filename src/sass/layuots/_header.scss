@@ -97,7 +97,8 @@
 }
 
 // -----------------------------------------------
-.header__background {
+.header__background-home {
+  position: relative;
   background-image: url('../images/header-img.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -157,6 +158,7 @@
 }
 
 .header__background-library {
+  position: relative;
   background-image: url('../images/header-library.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,6 +166,7 @@
   width: 100vw;
   height: 230px;
 }
+
 .header__button {
   display: flex;
   justify-content: center;
@@ -192,4 +195,26 @@
   &:not(:last-child) {
     margin-right: 15px;
   }
+}
+
+.disabled {
+  display: none;
+}
+
+.enabled {
+  width: 100%;
+  height: 480px;
+
+  // background-image: linear-gradient(rgba(24, 2, 2, 0.7), rgba(22, 20, 20, 0.7)),
+  // url('../images/header/6.-salle-1-centre.jpg');
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header__btn.in-active {
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+  color: var(--white-text-color);
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
 }
