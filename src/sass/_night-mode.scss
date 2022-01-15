@@ -26,6 +26,10 @@
   background: linear-gradient(90deg, #181616 20%, #3f2b2b 50%, #0f0e0e 80%);
   color: white;
 
+  .night-mode-btn {
+    color: #eeca67f5;
+  }
+
   .preloader {
     background: rgb(39, 35, 35);
   }
@@ -61,12 +65,13 @@
 
 .night-mode-btn {
   position: fixed;
-  top: 40px;
+  top: 50px;
   right: 0;
-  padding: 5px 10px;
+  padding: 3px 7px;
   cursor: pointer;
-  font-size: 30px;
-  box-shadow: 0 0 10px rgba(12, 0, 0, 0.452);
+  font-size: 25px;
+  box-shadow: 0 0 10px rgba(255, 245, 245, 0.904);
+  color: $white-text-color;
   border-radius: 20%;
   z-index: 999999999;
 }

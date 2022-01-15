@@ -1,6 +1,7 @@
 .header {
   position: relative;
-  height: 200px;
+
+  margin-bottom: 60px;
 }
 
 .header__navigation {
@@ -93,4 +94,127 @@
 
 .is-hidden {
   display: none;
+}
+
+// -----------------------------------------------
+.header__background-home {
+  position: relative;
+  background-image: url('../images/header-img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 230px;
+}
+
+.header__container {
+  padding-top: 41px;
+  padding-bottom: 97px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.header__pages {
+  display: inline-flex;
+}
+.header__logo {
+  display: inline-flex;
+  font-family: Roboto;
+  align-items: center;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  color: #ffffff;
+
+  &::before {
+    content: '';
+
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/film.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.header__title {
+  display: flex;
+  font-family: Roboto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.header__item:not(:last-child) {
+  margin-right: 39px;
+}
+
+.header__background-library {
+  position: relative;
+  background-image: url('../images/header-library.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 230px;
+}
+
+.header__button {
+  display: flex;
+  justify-content: center;
+}
+
+.header__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  margin-top: 45px;
+  width: 136px;
+  height: 44px;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.disabled {
+  display: none;
+}
+
+.enabled {
+  width: 100%;
+  height: 480px;
+
+  // background-image: linear-gradient(rgba(24, 2, 2, 0.7), rgba(22, 20, 20, 0.7)),
+  // url('../images/header/6.-salle-1-centre.jpg');
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header__btn.in-active {
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+  color: var(--white-text-color);
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
 }
