@@ -1,54 +1,55 @@
-.header__search-form {
+.header__form {
   display: flex;
-  // background-color: rgb(149, 159, 252);
-  padding: 26px 0px 18px 0px;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+}
 
-  // width: 100%;
+.header__search-form {
+  display: inline-flex;
+  // background-color: rgb(149, 159, 252);
+  padding: 26px 0px 0px 0px;
+
+  border-bottom: 1px solid $white-text-color;
+
+  width: 336px;
 }
 
 .header__search-input {
   border: none;
-  border-bottom: 1px solid #fff;
-  padding: 5px 10px;
+  // border-bottom: 1px solid $white-text-color;
+  padding: 5px 0px 4px 0px;
 
   font-family: Roboto;
   font-style: 400;
-
   font-size: 14px;
   line-height: 1.14;
 
-  color: #ffffff;
+  color: $white-text-color;
 
   box-sizing: border-box;
   outline: none;
   background: none;
-  width: 321px;
+  width: 100%;
 
   &::placeholder {
     font-family: Roboto;
     font-style: 400;
     font-size: 14px;
     line-height: 1.14;
-    color: #ffffff;
+    color: $white-text-color;
   }
 }
 
 .header__search-btn {
-  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   cursor: pointer;
-  margin-left: -1px;
-  width: 15px;
+  margin: 0;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 4px 10px;
-
-  box-sizing: border-box;
-  border-bottom: 1px solid #fff;
+  border: none;
   outline: none;
+  width: 20px;
 }
 
 .header__search-icon {
@@ -62,13 +63,13 @@
 
 .header__search-error-text {
   font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+
+  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
 
   align-items: center;
   text-align: center;
 
-  color: #ff001b;
+  color: $error-text-color;
 }
