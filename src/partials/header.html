@@ -1,4 +1,6 @@
-<header class="header" id="header">
+
+<header class="header header__background" id="header">
+
   <nav class="header__navigation is-hidden">
     <div class="header__drop-btn">Sort by <i class="fas fa-sort-down"></i></div>
     <div class="header__wrapper">
@@ -19,26 +21,47 @@
     </div>
   </nav>
 
-  <div class="header__form">
-    <form class="header__search-form" id="search-form">
-      <input
-        class="header__search-input"
-        type="text"
-        name="query"
-        autocomplete="off"
-        placeholder="Search movies..."
-      />
-      <button type="submit" class="header__search-btn">Search</button>
-    </form>
-    <div class="header__search-error is-hidden">
-      <p class="header__search-error-text">
-        Search result not successful. Enter the correct movie name and try again.
-      </p>
+  <!-- -------------------------------------------------- -->
+
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a href="" class="header__logo">
+        <!-- <svg class="header__icon" width="24" height="24">
+          <use href="../src/images/film.svg"></use>
+        </svg> -->
+        Filmoteka
+      </a>
+      <ul class="header__pages">
+        <li class="header__item">
+          <a href="/index.html" class="header__title">Home</a>
+        </li>
+        <li class="header__item">
+          <a href="/partials/my-library-header.html" class="header__title">My  library</a>
+        </li>
+      </ul>
+    </nav>
+
+    
+  
+  
+    <div class="header__form">
+      <form class="header__search-form" id="search-form">
+        <input class="header__search-input" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
+        <button type="submit" class="header__search-btn">
+          <svg class="header__search-icon" width="24" height="24">
+          <use href="./images/search.svg"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="header__search-error is-hidden">
+        <p class="header__search-error-text">
+          Search result not successful. Enter the correct movie name and try again.
+        </p>
+      </div>
+    
+    </div>
+  
   </div>
 
-            <div class="header__button disabled">
-              <button type="submit" class="header__btn" id="btn-watched">Watched</button>
-              <button type="submit" class="header__btn" id="btn-queue">queue</button>
-            </div>
-  </div>
-</header>
+
+  </header>
