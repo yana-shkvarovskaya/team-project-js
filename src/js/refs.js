@@ -18,7 +18,7 @@ export default function getRefs() {
     overlayBackgroundRef: document.querySelector('.overlay__bg'), //modal.html
     clsBtnRef: document.querySelector('.modal-form__close-btn'), //modal.html
     // --- Pages (pagination) ---
-
+    paginationBox: document.getElementById('tui-pagination-container'),
     // ---SCROLL-TOP---
     topBtn: document.querySelector('.scroll-top'),
 
