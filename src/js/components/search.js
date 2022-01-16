@@ -1,13 +1,16 @@
 import card from '../../templates/cardMovie';
+import getRefs from '../refs';
 import API from '../API/api-service';
 import searchErr from './search-error';
 import { startSpinner, stopSpinner } from './preloader';
 
 const refs = {
   searchForm: document.querySelector('.header__search-form'),
-  insertPoint: document.querySelector('.gallery__list'),
+  /* insertPoint: document.querySelector('.gallery__list'), */
   preloader: document.querySelector('.preloader'),
 };
+
+const { galleryList, paginationBox } = getRefs();
 
 const api = new API();
 
@@ -17,6 +20,7 @@ refs.searchForm.addEventListener('submit', onSearchInput);
 
 async function onSearchInput(e) {
   e.preventDefault();
+  paginationBox.classList.add('visually-hidden');
   const value = e.currentTarget.elements.query.value;
   if (!value.trim()) return;
   initialReset();
@@ -34,7 +38,8 @@ async function onSearchInput(e) {
       stopSpinner();
       return;
     }
-    refs.insertPoint.insertAdjacentHTML('beforeend', card(markup));
+    /* refs.insertPoint.insertAdjacentHTML('beforeend', card(markup)); */
+    galleryList.insertAdjacentHTML('beforeend', card(markup));
     stopSpinner();
   } catch (error) {
     console.error(error);
@@ -42,7 +47,8 @@ async function onSearchInput(e) {
 }
 
 function initialReset() {
-  refs.insertPoint.innerHTML = '';
+  /* refs.insertPoint.innerHTML = ''; */
+  galleryList.innerHTML = '';
   searchErr(false);
   api.setPage(1);
 }
