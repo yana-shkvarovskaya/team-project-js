@@ -20,8 +20,8 @@ libraryLink.addEventListener('click', openLibrary);
 function openLibrary() {
   galleryList.innerHTML = '';
   header.classList.replace('header__background-home', 'header__background-library');
-  homeLink.classList.remove('active');
-  libraryLink.classList.add('active');
+  homeLink.classList.remove('active', 'header__home--current');
+  libraryLink.classList.add('active', 'header__library--current');
   headerForm.classList.add('disabled');
   headerButton.classList.remove('disabled');
   btnQueue.classList.add('in-active');

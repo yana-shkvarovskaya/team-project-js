@@ -1,16 +1,21 @@
-.header__form {
-  display: flex;
-  justify-content: center;
-}
+// .header__form {
+//   display: flex;
+//   justify-content: center;
+// }
 
 .header__search-form {
-  display: inline-flex;
+  display: flex;
   // background-color: rgb(149, 159, 252);
-  padding: 26px 0px 0px 0px;
-
+  padding: 0;
+  justify-content: center;
   border-bottom: 1px solid $white-text-color;
+  margin-left: auto;
+  margin-right: auto;
 
-  width: 336px;
+  width: 280px;
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
 }
 
 .header__search-input {
@@ -63,6 +68,7 @@
 
 .header__search-error-text {
   font-family: Roboto;
+  margin-top: 22px;
 
   font-weight: 400;
   font-size: 14px;
