@@ -3,25 +3,26 @@ import getRefs from '../refs';
 import card from '../../templates/cardMovie';
 import createCardData from '../data/create-card-data';
 import { startSpinner, stopSpinner } from './preloader';
-import { pagination, paginationReset } from '../components/pagination';
+import { paginationReset, currentPage } from '../components/pagination';
+/* import { currentPage } from '../components/library'; */
 
 const { galleryList, paginationBox } = getRefs();
-export let currentPage = 1;
 
 const api = new API();
+export let searchBy = '';
 
-async function createMarkup() {
-  window.scroll(0, 0);
+export async function createMarkup() {
+  searchBy = 'popularity';
   startSpinner();
 
   try {
-    const result = await api.fetchMovieTrending();
-    console.log(result);
+    const data = await api.fetchMovieTrending();
+    const result = await data.data;
     const results = await result.results;
     const markup = await createCardData(results);
-    paginationReset(api.totalResults, currentPage);
-    galleryList.insertAdjacentHTML('beforeend', card(markup));
+    paginationReset(result.total_results, currentPage);
     paginationBox.classList.remove('visually-hidden');
+    galleryList.insertAdjacentHTML('beforeend', card(markup));
     console.log(markup);
 
     // let request = 'home';
@@ -40,15 +41,6 @@ async function createMarkup() {
 
 createMarkup();
 
-function clearGallery() {
+export function clearGallery() {
   galleryList.innerHTML = '';
 }
-
-pagination.on('afterMove', event => {
-  paginationBox.classList.add('visually-hidden');
-  clearGallery();
-  currentPage = event.page;
-  console.log(currentPage);
-  createMarkup();
-  return currentPage;
-});

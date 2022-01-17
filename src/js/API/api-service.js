@@ -1,11 +1,10 @@
 import ACCESS from './api-authorization';
 import apiAuthorization from './api-authorization';
-import {currentPage} from '../components/get-popular'
+import { currentPage } from '../components/pagination';
 
 const axios = require('axios').default;
 
 // console.log(axios);
-
 axios.defaults.baseURL = ACCESS.BASE_URL;
 axios.defaults.headers.common.Authorization = ACCESS.API_KEY;
 
@@ -14,17 +13,15 @@ export default class API {
     this.page = 1;
     this.searchQuery = '';
     this.movieId = '';
-    this.totalResults=0
   }
 
   // Информация о трендовых фильмах
+
   async fetchMovieTrending() {
     try {
       const response = await axios.get(`/trending/movie/day?page=${currentPage}`);
-      const data = await response.data;
-      this.totalResults=data.total_results
-
-      return data;
+      console.log(currentPage);
+      return response;
     } catch (error) {
       console.error(error);
     }
@@ -47,7 +44,7 @@ export default class API {
   async fetchMovieSearchQuery() {
     try {
       const response = await axios.get(
-        `/search/movie?&query=${this.searchQuery}&page=${this.page}`,
+        `/search/movie?&query=${this.searchQuery}&page=${currentPage}`,
       );
       return response.data;
     } catch (error) {
@@ -91,4 +88,3 @@ export default class API {
     this.page = 1;
   }
 }
-

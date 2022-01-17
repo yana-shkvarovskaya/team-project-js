@@ -1,14 +1,17 @@
 import Pagination from 'tui-pagination';
 import getRefs from '../refs';
-
+import { clearGallery, createMarkup, searchBy } from '../components/get-popular';
+import { changeStorage, currentStorage } from '../components/library';
+/* import {searchBy } from '../components/search'; */
 const { paginationBox } = getRefs();
+
+export let currentPage = 1;
 
 let options = {
   totalItems: 0,
   itemsPerPage: 20,
   visiblePages: 5,
   page: 1,
-  currentPage: 1,
 
   centerAlign: true,
   firstItemClassName: 'tui-first-child',
@@ -38,4 +41,22 @@ function paginationReset(number, currentPage) {
   pagination._paginate(currentPage);
 }
 
-export { pagination, paginationReset };
+pagination.on('afterMove', event => {
+  currentPage = event.page;
+  console.log(currentPage);
+  clearGallery();
+  window.scroll(0, 0);
+  paginationBox.classList.add('visually-hidden');
+  if (currentStorage === 'Queue') {
+    changeStorage('Watched', currentPage);
+  } else if (currentStorage === 'Watched') {
+    changeStorage('Watched', currentPage);
+  } else if (searchBy === 'query') {
+    onSearchInput();
+  } else {
+    createMarkup();
+  }
+  return currentPage;
+});
+
+export { pagination, paginationReset, options };
