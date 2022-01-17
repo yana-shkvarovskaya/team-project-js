@@ -11,6 +11,8 @@ export default function getRefs() {
     headerButton: document.querySelector('.header__button'),
 
     // --- GALLERY ---
+    sliderContainer: document.querySelector('.slider-wrapper'),
+    sliderWraper: document.querySelector('.js-slider-container'),
     galleryList: document.querySelector('.gallery__list'),
     // --- Modal ---
     modalСardRef: document.querySelector('.modal-form__card'), //modal.html

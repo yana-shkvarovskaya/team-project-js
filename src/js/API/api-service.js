@@ -1,6 +1,6 @@
 import ACCESS from './api-authorization';
 import apiAuthorization from './api-authorization';
-import {currentPage} from '../components/get-popular'
+import { currentPage } from '../components/get-popular';
 
 const axios = require('axios').default;
 
@@ -14,15 +14,15 @@ export default class API {
     this.page = 1;
     this.searchQuery = '';
     this.movieId = '';
-    this.totalResults=0
+    this.totalResults = 0;
   }
 
   // Информация о трендовых фильмах
   async fetchMovieTrending() {
     try {
-      const response = await axios.get(`/trending/movie/day?page=${currentPage}`);
+      const response = await axios.get(`/trending/movie/week?page=${currentPage}`);
       const data = await response.data;
-      this.totalResults=data.total_results
+      this.totalResults = data.total_results;
 
       return data;
     } catch (error) {
@@ -91,4 +91,3 @@ export default class API {
     this.page = 1;
   }
 }
-
