@@ -328,13 +328,43 @@
   display: flex;
 }
 
+// .modal-form__btn {
+//   width: 113px;
+//   height: 44px;
+//   border-radius: 5px;
+//   border: 1px solid $black-text-color;
+//   box-sizing: border-box;
+//   background: $white-text-color;
+
+//   @media screen and (min-width: 768px) {
+//     width: 125px;
+//   }
+//   @media screen and (min-width: 1024px) {
+//     width: 136px;
+//   }
+
+//   &:not(:last-child) {
+//     margin-right: 15px;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     background-color: $accent-color;
+//     color: $white-text-color;
+
+//     cursor: pointer;
+//   }
+// }
+
 .modal-form__btn {
+  background: linear-gradient(0deg, $white-text-color 0%, $accent-color 100%);
+  border: none;
   width: 113px;
   height: 44px;
   border-radius: 5px;
   border: 1px solid $black-text-color;
   box-sizing: border-box;
-  background: $white-text-color;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     width: 125px;
@@ -346,12 +376,9 @@
   &:not(:last-child) {
     margin-right: 15px;
   }
+}
+.modal-form__btn:hover {
+  background: $accent-color;
 
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-    color: $white-text-color;
-
-    cursor: pointer;
-  }
+  color: $white-text-color;
 }
