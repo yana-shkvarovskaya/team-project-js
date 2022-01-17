@@ -13,18 +13,23 @@
 
 .header__drop-btn {
   position: absolute;
-  right: 168px;
-  top: -40px;
+  right: -90px;
+  top: 100px;
   width: 200px;
-  background-color: white;
-  color: rgb(59, 7, 7);
-  line-height: 35px;
-  padding: 0 20px;
-  border: 1px solid black;
+  // background-color: white;
+  color: $white-text-color;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 1px solid $white-text-color;
   border-radius: 5px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 14px;
+  // font-weight: 500;
   cursor: pointer;
+
+  &:hover {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
 }
 
 .header__drop-btn i {
@@ -36,15 +41,16 @@
 
 .header__wrapper {
   position: absolute;
-  top: 4px;
-  right: 170px;
+  top: 140px;
+  right: -90px;
   display: none;
   width: 200px;
-  background-color: white;
-  border: 1px solid black;
+  background-color: transparent;
+  border: 1px solid $white-text-color;
   border-radius: 5px;
   overflow: hidden;
   transition: 2s;
+  z-index: 999;
 }
 
 .header__wrapper.show {
@@ -66,24 +72,48 @@
 
 .header__wrapper ul li {
   text-decoration: none;
-  color: rgb(59, 7, 7);
-  line-height: 55px;
-  font-size: 18px;
-  font-weight: 500;
+  color: $white-text-color;
+  background: linear-gradient(rgb(1 1 1), rgb(70 56 47));
+  // line-height: 55px;
+  line-height: 30px;
   padding: 0 10px;
+  font-size: 14px;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background-color: gray;
+    color: $accent-color;
+    // background-color: $secondary-bg-color;
   }
 }
 
+.header__rating-sort,
+.header__back-rating-btn,
+.header__decrease-btn,
+.header__back-release-btn,
+.header__desc-btn {
+  margin-bottom: 5px;
+  border: 1px solid $white-text-color;
+
+  &:hover {
+    border: 1px solid $accent-color;
+  }
+}
+
+.header__release-sort,
+.header__increase-btn,
+.header__asc-btn {
+  border: 1px solid $white-text-color;
+
+  &:hover {
+    border: 1px solid $accent-color;
+  }
+}
 .header__wrapper li i {
   float: right;
-  line-height: 55px;
-  font-size: 25px;
+  line-height: 32px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -112,7 +142,7 @@
   padding-bottom: 97px;
 
   @media screen and (max-width: 767px) {
-    width: 320px;
+    width: 100%;
   }
 }
 .header__nav {
@@ -239,7 +269,7 @@
 .header__btn.in-active {
   border: 1px solid $accent-color;
   background-color: $accent-color;
-  color: var(--white-text-color);
+  color: $white-text-color;
   filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
 }
 

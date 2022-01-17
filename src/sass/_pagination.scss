@@ -7,40 +7,41 @@
 .tui-pagination .tui-page-btn {
   display: inline-block;
   position: relative;
-  width: 23px;
-  padding: 3px 0;
-  margin-left: 8px;
-  color: black;
+  width: 21px;
+  padding: 7px 7px;
+  margin-left: 4px;
+  color: $black-text-color;
   font-size: 12px;
+  line-height: 16px;
   font-weight: 400;
   text-decoration: none;
   vertical-align: middle;
   @media screen and (min-width: 768px) {
-    width: 50px;
-    padding: 8px 0;
+    width: 40px;
+    padding: 10px;
     margin-left: 15px;
-    font-size: 23px;
+    font-size: 14px;
   }
 }
 
 .tui-pagination .tui-page-btn:hover {
-  background-color: orange;
-  color: #fff;
+  background-color: $accent-color;
+  color: $white-text-color;
   border-radius: 4px;
   transform: scale(1.2);
 }
 
 .tui-pagination .tui-is-selected,
 .tui-pagination strong {
-  color: #fff;
-  background: orange;
+  color: $white-text-color;
+  background: $accent-color;
   border-radius: 4px;
   cursor: default;
   transform: scale(1.2);
 }
 
 .tui-pagination .tui-is-selected:hover {
-  background-color: orange;
+  background-color: $accent-color;
 }
 
 .tui-pagination .tui-first-child.tui-is-selected,
@@ -72,6 +73,9 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 0px;
+  &:hover {
+    color: $white-text-color;
+  }
 }
 
 .tui-pagination .tui-prev-is-ellip,
@@ -159,10 +163,14 @@
   color: #333;
   border: 0;
   outline: none;
+
+  &:hover {
+    color: $white-text-color;
+  }
 }
 
 .tui-page-inputs .tui-page-current {
-  color: orange;
+  color: $accent-color;
 }
 
 .tui-page-separator {

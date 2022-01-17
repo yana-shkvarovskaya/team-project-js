@@ -13,6 +13,7 @@ const {
   galleryList,
   paginationBox,
   sliderContainer,
+  sortWraper,
 } = getRefs();
 
 btnWatched.addEventListener('click', watchedStorage);
@@ -28,6 +29,8 @@ function openLibrary() {
   headerForm.classList.add('disabled');
   headerButton.classList.remove('disabled');
   sliderContainer.classList.add('disabled');
+  sortWraper.classList.add('disabled');
+
   btnQueue.classList.add('in-active');
   queuedStorage();
 }

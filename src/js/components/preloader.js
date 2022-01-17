@@ -2,7 +2,9 @@
 
 import getRefs from '../refs';
 
-const { preloader } = getRefs();
+const { preloader, sliderContainer } = getRefs();
+
+// sliderContainer.classList.add('disabled');
 
 window.onload = function () {
   preloader.classList.add('hide');

@@ -21,6 +21,8 @@ html {
   right: 20px;
   // overflow: hidden;
   transition: 1s;
+  cursor: pointer;
+  opacity: 0.9;
 
   @media screen and (min-width: 768px) {
     bottom: 40px;
@@ -32,113 +34,12 @@ html {
   opacity: 0;
 }
 
-// .container {
-//   width: 500px;
-// }
-
-.scroll-top span {
-  position: relative;
-  width: 60px;
-  height: 60px;
+.fa-rocket {
+  color: $accent-color;
+  font-size: 50px;
+  transform: rotate(-45deg);
 
   @media screen and (min-width: 768px) {
-    width: 70px;
-    height: 70px;
-  }
-  background: #eaeef0;
-  border: 0.6px solid #eaeef0;
-  border-radius: 50%;
-  box-shadow: -0.8px -0.8px 1.5px rgba(255, 255, 255, 1), -0.8px -0.8px 2.5px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-
-.scroll-top span::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.5), inset -2x -2px 5px rgba(255, 255, 255, 1);
-  overflow: hidden;
-}
-
-.scroll-top span::after {
-  content: '';
-  position: absolute;
-  inset: 6px;
-  background: #eaeef0;
-  border: 1px solid #eaeef0;
-  border-radius: 50%;
-  box-shadow: -8px -8px 25px rgba(255, 255, 255, 1), 8px 8px 25px rgba(0, 0, 0, 0.25),
-    inset 3px 3px 10px rgba(0, 0, 0, 0.15), inset -1px -1px 15px rgba(255, 255, 255, 1);
-}
-
-.scroll-top span i {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  filter: blur(5px);
-  background: linear-gradient($black-text-color, $accent-color, $footer-text-color);
-  animation: animate 1s linear infinite;
-  overflow: hidden;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.rocket {
-  position: absolute;
-  inset: 3px;
-  z-index: 999999;
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.rocket .fa-rocket {
-  position: absolute;
-  color: $accent-color;
-  // opacity: 80%;
-  font-size: 1.5em;
-  -webkit-text-stroke: 0.5px rgb(53, 46, 46);
-  animation: animateRocket 0.2s linear infinite;
-  overflow: hidden;
-}
-@keyframes animateRocket {
-  0%,
-  100% {
-    transform: translate(0px, 0px) rotate(-45deg);
-  }
-  50% {
-    transform: translate(0, 3px) rotate(-45deg);
-  }
-}
-
-.fa-cloud {
-  position: absolute;
-  top: calc(-20px * var(--i));
-  left: calc(25px * var(--i));
-  font-size: 1.5em;
-  color: #fff;
-  -webkit-text-stroke: 0.5px #000;
-  animation: animateClouds 1s linear infinite;
-  animation-delay: calc(-0.5s * var(--i));
-  overflow: hidden;
-}
-
-@keyframes animateClouds {
-  0% {
-    transform: translateY(calc(-20 * 5px));
-  }
-  100% {
-    transform: translateY(calc(25 * 5px));
+    font-size: 60px;
   }
 }
