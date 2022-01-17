@@ -255,6 +255,12 @@
   }
   &--cnt {
     margin-left: 3px;
+    background-color: $secondary-bg-color;
+    border-radius: 5px;
+    width: 36px;
+    height: 16px;
+
+    text-align: center;
   }
 }
 .comma {
@@ -325,6 +331,7 @@
 .modal-form__btn {
   width: 113px;
   height: 44px;
+  border-radius: 5px;
 
   @media screen and (min-width: 768px) {
     width: 125px;
@@ -332,7 +339,14 @@
   @media screen and (min-width: 1024px) {
     width: 136px;
   }
+
   &:not(:last-child) {
     margin-right: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-text-color;
   }
 }
