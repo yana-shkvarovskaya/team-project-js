@@ -16,8 +16,8 @@ export async function createMarkup() {
   startSpinner();
 
   try {
-    const data = await api.fetchMovieTrending();
-    const result = await data.data;
+    const result = await api.fetchMovieTrending();
+    console.log(result);
     const results = await result.results;
     const markup = await createCardData(results);
     paginationReset(result.total_results, currentPage);
