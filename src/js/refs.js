@@ -9,8 +9,10 @@ export default function getRefs() {
     header: document.querySelector('#header'),
     headerForm: document.querySelector('.header__form'),
     headerButton: document.querySelector('.header__button'),
+    sortWraper: document.querySelector('.header__drop-btn'),
 
     // --- GALLERY ---
+    sliderTitle: document.querySelector('.slider-title'),
     sliderContainer: document.querySelector('.slider-wrapper'),
     sliderWraper: document.querySelector('.js-slider-container'),
     galleryList: document.querySelector('.gallery__list'),
