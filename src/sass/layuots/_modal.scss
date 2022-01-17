@@ -52,11 +52,12 @@
 
   @media screen and (min-width: 768px) {
     width: 618px;
-    height: 562px;
+    height: auto;
   }
+
   @media screen and (min-width: 1024px) {
     width: 882px;
-    height: 628px;
+    height: auto;
   }
 }
 
@@ -93,12 +94,15 @@
     grid-template-columns: repeat(2, 264px);
     gap: 30px;
     padding: 42px 30px 40px;
+    height: auto;
   }
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(2, 396px);
     padding: 50px 30px 40px 30px;
+    height: auto;
   }
 }
+
 .card__image-thumb {
   position: relative;
   width: 240px;
@@ -115,7 +119,7 @@
   }
   @media screen and (min-width: 1024px) {
     width: 396px;
-    max-height: 90%;
+    max-height: 100%;
   }
 }
 
@@ -206,6 +210,7 @@
     border-radius: 5px;
     width: 36px;
     height: 16px;
+    color: $black-text-color;
 
     text-align: center;
   }
@@ -326,7 +331,6 @@
 }
 .modal-form__btn:hover {
   background: $accent-color;
-
   color: $white-text-color;
 }
 
