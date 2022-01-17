@@ -135,4 +135,4 @@ module.exports="/team-project-js/Evgeniya_Gorlach.bdca21ec.jpg";
 },{"../refs":"VyiV","../../templates/cardMovie.hbs":"c3Pu"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/components/get-popular"),require("./js/components/popular"),require("./js/components/drop-down"),require("./js/components/filter"),require("./js/components/search"),require("./js/team-modal"),require("./js/refs"),require("./js/components/preloader"),require("./js/components/scroll-top"),require("./js/components/night-mode"),require("./js/components/modal"),require("./js/components/library");
 },{"./sass/main.scss":"clu1","./js/components/get-popular":"UGTU","./js/components/popular":"eRyn","./js/components/drop-down":"Ap0W","./js/components/filter":"ICh5","./js/components/search":"A7jH","./js/team-modal":"SVxB","./js/refs":"VyiV","./js/components/preloader":"meUZ","./js/components/scroll-top":"rjfz","./js/components/night-mode":"boK5","./js/components/modal":"fSkc","./js/components/library":"wZ4W"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-project-js/src.a0724919.js.map
+//# sourceMappingURL=/team-project-js/src.fa6145cf.js.map
