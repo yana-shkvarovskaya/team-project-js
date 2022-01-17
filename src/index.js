@@ -1,5 +1,6 @@
 import './sass/main.scss';
 import './js/components/get-popular';
+import './js/components/popular';
 import './js/components/drop-down';
 import './js/components/filter';
 import './js/components/search';
