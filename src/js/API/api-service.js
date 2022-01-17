@@ -14,13 +14,17 @@ export default class API {
     this.page = 1;
     this.searchQuery = '';
     this.movieId = '';
+    this.totalResults=0
   }
 
   // Информация о трендовых фильмах
   async fetchMovieTrending() {
     try {
       const response = await axios.get(`/trending/movie/day?page=${currentPage}`);
-      return response;
+      const data = await response.data;
+      this.totalResults=data.total_results
+
+      return data;
     } catch (error) {
       console.error(error);
     }
@@ -87,3 +91,4 @@ export default class API {
     this.page = 1;
   }
 }
+

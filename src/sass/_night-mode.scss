@@ -27,7 +27,7 @@
   color: white;
 
   .night-mode-btn {
-    color: #eeca67f5;
+    color: $white-text-color;
   }
 
   .preloader {
@@ -65,13 +65,13 @@
 
 .night-mode-btn {
   position: fixed;
-  top: 50px;
+  top: 92px;
   right: 0;
   padding: 3px 7px;
   cursor: pointer;
   font-size: 25px;
-  box-shadow: 0 0 10px rgba(255, 245, 245, 0.904);
-  color: $white-text-color;
+  box-shadow: 0 0 10px rgba(157, 143, 132, 0.904);
+  color: #9d8f84;
   border-radius: 20%;
   z-index: 999999999;
 }

@@ -11,6 +11,7 @@ const {
   headerForm,
   headerButton,
   galleryList,
+  paginationBox,
 } = getRefs();
 
 btnWatched.addEventListener('click', watchedStorage);
@@ -18,6 +19,7 @@ btnQueue.addEventListener('click', queuedStorage);
 libraryLink.addEventListener('click', openLibrary);
 
 function openLibrary() {
+  paginationBox.classList.add('visually-hidden');
   galleryList.innerHTML = '';
   header.classList.replace('header__background-home', 'header__background-library');
   homeLink.classList.remove('active', 'header__home--current');
