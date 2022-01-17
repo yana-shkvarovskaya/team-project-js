@@ -332,6 +332,9 @@
   width: 113px;
   height: 44px;
   border-radius: 5px;
+  border: 1px solid $black-text-color;
+  box-sizing: border-box;
+  background: $white-text-color;
 
   @media screen and (min-width: 768px) {
     width: 125px;
@@ -348,5 +351,7 @@
   &:focus {
     background-color: $accent-color;
     color: $white-text-color;
+
+    cursor: pointer;
   }
 }
