@@ -24,15 +24,7 @@ async function createMarkup() {
     paginationBox.classList.remove('visually-hidden');
     console.log(markup);
 
-    // let request = 'home';
-    // renderPagination(request, result.total_pages);
-
     stopSpinner();
-
-    // homeLink.classList.add('active');
-    // libraryLink.classList.remove('active');
-    // headerForm.classList.remove('disabled');
-    // headerButton.classList.add('disabled');
   } catch (error) {
     console.error(error);
   }
