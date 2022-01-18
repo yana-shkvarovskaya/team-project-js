@@ -8,6 +8,8 @@ export default function getRefs() {
     homeLink: document.querySelector('#home-link'),
     header: document.querySelector('#header'),
     headerForm: document.querySelector('.header__form'),
+    searchForm: document.querySelector('.header__search-form'),
+    searchInput: document.querySelector('.header__search-input'),
     headerButton: document.querySelector('.header__button'),
 
     // --- GALLERY ---

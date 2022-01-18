@@ -3,16 +3,14 @@ import getRefs from '../refs';
 import card from '../../templates/cardMovie';
 import createCardData from '../data/create-card-data';
 import { startSpinner, stopSpinner } from './preloader';
-import { paginationReset, currentPage } from '../components/pagination';
-/* import { currentPage } from '../components/library'; */
+import { paginationSetTotalItems } from '../components/pagination';
 
 const { galleryList, paginationBox } = getRefs();
 
 const api = new API();
-export let searchBy = '';
+let searchBy = '';
 
 export async function createMarkup() {
-  searchBy = 'popularity';
   startSpinner();
 
   try {
@@ -20,10 +18,10 @@ export async function createMarkup() {
     console.log(result);
     const results = await result.results;
     const markup = await createCardData(results);
-    paginationReset(result.total_results, currentPage);
+    paginationSetTotalItems(result.total_results);
     paginationBox.classList.remove('visually-hidden');
     galleryList.insertAdjacentHTML('beforeend', card(markup));
-    console.log(markup);
+    searchBy = 'popular';
 
     // let request = 'home';
     // renderPagination(request, result.total_pages);

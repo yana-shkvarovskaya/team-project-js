@@ -1,6 +1,5 @@
 import ACCESS from './api-authorization';
 import apiAuthorization from './api-authorization';
-import { currentPage } from '../components/pagination';
 
 const axios = require('axios').default;
 
@@ -20,7 +19,7 @@ export default class API {
 
   async fetchMovieTrending() {
     try {
-      const response = await axios.get(`/trending/movie/day?page=${currentPage}`);
+      const response = await axios.get(`/trending/movie/day?page=${this.page}`);
       const data = await response.data;
       this.totalResults = data.total_results;
       return data;

@@ -1,10 +1,13 @@
 import Pagination from 'tui-pagination';
+import card from '../../templates/cardMovie';
+import createCardData from '../data/create-card-data';
 import getRefs from '../refs';
-import { clearGallery, createMarkup, searchBy } from '../components/get-popular';
+import { clearGallery } from '../components/get-popular';
+import { searchBy } from '../components/search';
 import { changeStorage, currentStorage } from '../components/library';
-/* import {searchBy } from '../components/search'; */
-const { paginationBox } = getRefs();
+const axios = require('axios').default;
 
+const { paginationBox, searchInput, galleryList } = getRefs();
 export let currentPage = 1;
 
 let options = {
@@ -36,9 +39,9 @@ let options = {
 
 const pagination = new Pagination(paginationBox, options);
 
-function paginationReset(number, currentPage) {
+function paginationSetTotalItems(number) {
   pagination.reset(number);
-  pagination._paginate(currentPage);
+  pagination._paginate(1);
 }
 
 pagination.on('afterMove', event => {
@@ -52,11 +55,39 @@ pagination.on('afterMove', event => {
   } else if (currentStorage === 'Watched') {
     changeStorage('Watched', currentPage);
   } else if (searchBy === 'query') {
-    onSearchInput();
+    paginateForSearch();
   } else {
-    createMarkup();
+    console.log(searchBy);
+    paginateForPopular();
   }
   return currentPage;
 });
 
-export { pagination, paginationReset, options };
+async function paginateForSearch() {
+  try {
+    const value = searchInput.value;
+    const data = await axios.get(`/search/movie?&query=${value}&page=${currentPage}`);
+    const result = await data.data;
+    const results = await result.results;
+    const markup = await createCardData(results);
+    galleryList.insertAdjacentHTML('beforeend', card(markup));
+    paginationBox.classList.remove('visually-hidden');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function paginateForPopular() {
+  try {
+    const data = await axios.get(`/trending/movie/day?page=${currentPage}`);
+    const result = await data.data;
+    const results = await result.results;
+    const markup = await createCardData(results);
+    galleryList.insertAdjacentHTML('beforeend', card(markup));
+    paginationBox.classList.remove('visually-hidden');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export { pagination, paginationSetTotalItems};

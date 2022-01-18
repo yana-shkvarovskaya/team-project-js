@@ -1,10 +1,6 @@
 import getRefs from '../refs';
 import card from '../../templates/cardMovie.hbs';
-import { paginationReset, currentPage } from '../components/pagination';
-/* import { clearGallery, createMarkup} from '../components/get-popular'; */
-/* import {searchBy } from '../components/search'; */
-
-let numberPage = 1;
+import { paginationSetTotalItems } from '../components/pagination';
 
 export let currentStorage = '';
 const {
@@ -55,7 +51,7 @@ export function changeStorage(value, number) {
   if (!items) return;
   console.log(items.length);
   if (items.length > 20) {
-    paginationReset(items.length, number);
+    paginationSetTotalItems(items.length);
     paginationBox.classList.remove('visually-hidden');
   }
 

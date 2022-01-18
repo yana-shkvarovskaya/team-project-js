@@ -3,8 +3,7 @@ import getRefs from '../refs';
 import API from '../API/api-service';
 import searchErr from './search-error';
 import { startSpinner, stopSpinner } from './preloader';
-import { paginationReset } from '../components/pagination';
-import { currentPage } from '../components/pagination';
+import { paginationSetTotalItems } from '../components/pagination';
 import createCardData from '../data/create-card-data';
 
 const refs = {
@@ -21,7 +20,6 @@ refs.searchForm.addEventListener('submit', onSearchInput);
 
 export async function onSearchInput(e) {
   e.preventDefault();
-  searchBy = 'query';
   paginationBox.classList.add('visually-hidden');
   const value = e.currentTarget.elements.query.value;
   if (!value.trim()) return;
@@ -40,11 +38,12 @@ export async function onSearchInput(e) {
       return;
     }
     if (data.total_results > 20) {
-      paginationReset(data.total_results, currentPage);
+      paginationSetTotalItems(data.total_results);
       paginationBox.classList.remove('visually-hidden');
     }
     /* refs.insertPoint.insertAdjacentHTML('beforeend', card(markup)); */
     galleryList.insertAdjacentHTML('beforeend', card(markup));
+    searchBy = 'query';
     stopSpinner();
   } catch (error) {
     console.error(error);
