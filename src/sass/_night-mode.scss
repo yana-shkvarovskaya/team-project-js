@@ -65,11 +65,20 @@
   .slider-title {
     color: $white-text-color;
   }
+
+  .enabled {
+    background-image: linear-gradient(to right, rgb(24 22 22), rgb(231 98 13 / 67%)),
+      url('/images/empty-list.jpg');
+  }
+
+  .tui-pagination .tui-page-btn {
+    color: $white-text-color;
+  }
 }
 
 .night-mode-btn {
   position: fixed;
-  top: 92px;
+  top: 173px;
   right: 0;
   padding: 3px 7px;
   cursor: pointer;

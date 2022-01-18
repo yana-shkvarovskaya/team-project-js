@@ -26,6 +26,10 @@
   // font-weight: 500;
   cursor: pointer;
 
+  @media screen and (max-width: 767px) {
+    right: -130px;
+  }
+
   &:hover {
     color: $accent-color;
     border: 1px solid $accent-color;
@@ -212,6 +216,7 @@
   background-position: center;
   width: 100vw;
   height: 230px;
+  margin-bottom: 20px;
 }
 
 .header__button {
@@ -224,6 +229,7 @@
   align-items: center;
   justify-content: center;
   background: none;
+  cursor: pointer;
 
   font-family: Roboto;
   font-weight: 500;
@@ -257,13 +263,23 @@
 
 .enabled {
   width: 100%;
-  height: 480px;
+  height: 400px;
+  margin-bottom: 20px;
 
-  // background-image: linear-gradient(rgba(24, 2, 2, 0.7), rgba(22, 20, 20, 0.7)),
-  // url('../images/header/6.-salle-1-centre.jpg');
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(236, 233, 230, 0.7)),
+    url('/images/empty-list.jpg');
 
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 500px 100%;
+  @media screen and (min-width: 768px) {
+    background-size: 70% 100%;
+    height: 480px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-size: 50% 100%;
+  }
+  background-position: center;
 }
 
 .header__btn.in-active {
