@@ -2,8 +2,11 @@
 
 .preloader {
   position: fixed;
-  top: 75%;
-  left: 45%;
+  top: 50%;
+  @media screen and (min-width: 1024px) {
+    top: 70%;
+  }
+  left: 46%;
   width: 100px;
   height: 100px;
   display: flex;

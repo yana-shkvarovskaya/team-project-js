@@ -14,6 +14,7 @@ const {
   paginationBox,
   sliderContainer,
   sortWraper,
+  mainContainer,
 } = getRefs();
 
 btnWatched.addEventListener('click', watchedStorage);
@@ -30,7 +31,7 @@ function openLibrary() {
   headerButton.classList.remove('disabled');
   sliderContainer.classList.add('disabled');
   sortWraper.classList.add('disabled');
-
+  mainContainer.classList.add('enabled');
   btnQueue.classList.add('in-active');
   queuedStorage();
 }
@@ -52,6 +53,10 @@ export function changeStorage(value) {
   galleryList.innerHTML = '';
   let items = JSON.parse(localStorage.getItem(value));
   if (!items) return;
+  if (items.length) {
+    mainContainer.classList.remove('enabled');
+  }
   let firstPageItems = items.slice(0, 20);
+  // insertPoint.insertAdjacentHTML('beforeend', card(firstPageItems));
   galleryList.insertAdjacentHTML('beforeend', card(firstPageItems));
 }

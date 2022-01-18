@@ -2,12 +2,19 @@
   line-height: normal;
   text-align: center;
   font-size: 0;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 767px;
+  }
 }
 
 .tui-pagination .tui-page-btn {
   display: inline-block;
   position: relative;
-  width: 21px;
+  width: 40px;
   padding: 7px 7px;
   margin-left: 4px;
   color: $black-text-color;
