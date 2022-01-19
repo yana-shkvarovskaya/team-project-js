@@ -67,8 +67,7 @@
   }
 
   .enabled {
-    background-image: linear-gradient(to right, rgb(24 22 22), rgb(231 98 13 / 67%)),
-      url('/images/empty-list.jpg');
+    background-image: url('/images/nothing-found-white.png');
   }
 
   .tui-pagination .tui-page-btn {
