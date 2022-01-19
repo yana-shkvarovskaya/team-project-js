@@ -5,10 +5,13 @@ import getRefs from '../refs';
 import { clearGallery } from '../components/get-popular';
 import { searchBy } from '../components/search';
 import { changeStorage, currentStorage } from '../components/library';
+import { startSpinner, stopSpinner } from './preloader';
 const axios = require('axios').default;
 
 const { paginationBox, searchInput, galleryList } = getRefs();
-export let currentPage = 1;
+let currentPage = 1;
+let value=''
+
 
 let options = {
   totalItems: 0,
@@ -55,39 +58,28 @@ pagination.on('afterMove', event => {
   } else if (currentStorage === 'Watched') {
     changeStorage('Watched', currentPage);
   } else if (searchBy === 'query') {
-    paginateForSearch();
+    value = searchInput.value;
+    paginateForSearch(`/search/movie?&query=${value}&page=${currentPage}`);
   } else {
     console.log(searchBy);
-    paginateForPopular();
+    paginateForSearch(`/trending/movie/day?page=${currentPage}`);
   }
   return currentPage;
 });
 
-async function paginateForSearch() {
+async function paginateForSearch(url) {
+  startSpinner();
   try {
-    const value = searchInput.value;
-    const data = await axios.get(`/search/movie?&query=${value}&page=${currentPage}`);
+    const data = await axios.get(url);
     const result = await data.data;
     const results = await result.results;
     const markup = await createCardData(results);
     galleryList.insertAdjacentHTML('beforeend', card(markup));
     paginationBox.classList.remove('visually-hidden');
+    stopSpinner();
   } catch (error) {
     console.error(error);
   }
 }
 
-async function paginateForPopular() {
-  try {
-    const data = await axios.get(`/trending/movie/day?page=${currentPage}`);
-    const result = await data.data;
-    const results = await result.results;
-    const markup = await createCardData(results);
-    galleryList.insertAdjacentHTML('beforeend', card(markup));
-    paginationBox.classList.remove('visually-hidden');
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-export { pagination, paginationSetTotalItems};
+export { pagination, paginationSetTotalItems };

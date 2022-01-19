@@ -71,6 +71,7 @@ export function changeStorage(value, number) {
   if (items.length) {
     mainContainer.classList.remove('enabled');
   }
-  let firstPageItems = items.slice(0, 20);
-  galleryList.insertAdjacentHTML('beforeend', card(firstPageItems));
+  /* let firstPageItems = items.slice(0, 20); */
+  /*  galleryList.insertAdjacentHTML('beforeend', card(firstPageItems)); */
+  galleryList.insertAdjacentHTML('beforeend', card(pageItems));
 }
