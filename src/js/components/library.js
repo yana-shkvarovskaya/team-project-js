@@ -68,13 +68,9 @@ export function changeStorage(value, number) {
       return pageItem.genres_type.splice(2, pageItem.genres_type.length - 2, ' Other');
     }
   });
-
-  galleryList.insertAdjacentHTML('beforeend', card(pageItems));
-  currentStorage = `${value}`;
   if (items.length) {
     mainContainer.classList.remove('enabled');
   }
   let firstPageItems = items.slice(0, 20);
-  // insertPoint.insertAdjacentHTML('beforeend', card(firstPageItems));
   galleryList.insertAdjacentHTML('beforeend', card(firstPageItems));
 }
