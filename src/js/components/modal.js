@@ -11,7 +11,7 @@ const {
   overlayBackgroundRef,
   overlayRef,
   clsBtnRef,
-
+  sliderWraper,
   //libraryLink,
 } = getRefs();
 let movieID;
@@ -26,6 +26,7 @@ async function onClickOnCard(e) {
 
     //Получаем ID фильма из data-атрибута, делаем запрос по ID на API-сервис
     const imgRef = e.target.parentNode.querySelector('img');
+    console.log(imgRef);
     const result = await createModalFilm(imgRef.dataset.src);
     movieID = result.id;
     //Получаем разметку модального окна по шаблону и вставляем ее модальное окно
@@ -54,6 +55,8 @@ async function onClickOnCard(e) {
     });
   }
 }
+
+export default onClickOnCard;
 
 function onModalBtnClick(e) {
   if (e.target.nodeName === 'BUTTON' && !e.target.classList.contains('modal-form__trailer')) {

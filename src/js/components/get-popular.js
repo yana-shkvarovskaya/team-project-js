@@ -23,15 +23,7 @@ export async function createMarkup() {
     galleryList.insertAdjacentHTML('beforeend', card(markup));
     searchBy = 'popular';
 
-    // let request = 'home';
-    // renderPagination(request, result.total_pages);
-
     stopSpinner();
-
-    // homeLink.classList.add('active');
-    // libraryLink.classList.remove('active');
-    // headerForm.classList.remove('disabled');
-    // headerButton.classList.add('disabled');
   } catch (error) {
     console.error(error);
   }

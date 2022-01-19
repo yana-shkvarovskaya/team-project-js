@@ -26,9 +26,11 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "axios": "^0.24.0",
     "basiclightbox": "^5.0.4",
     "firebase": "^9.6.2",
+    "swiper": "^7.4.1",
     "t": "^0.5.1",
     "templates": "^1.2.9",
     "tui-pagination": "^3.4.1"

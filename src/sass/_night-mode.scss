@@ -61,11 +61,23 @@
   .fa-cloud {
     color: #b39b9b;
   }
+
+  .slider-title {
+    color: $white-text-color;
+  }
+
+  .enabled {
+    background-image: url('/images/nothing-found-white.png');
+  }
+
+  .tui-pagination .tui-page-btn {
+    color: $white-text-color;
+  }
 }
 
 .night-mode-btn {
   position: fixed;
-  top: 92px;
+  top: 173px;
   right: 0;
   padding: 3px 7px;
   cursor: pointer;

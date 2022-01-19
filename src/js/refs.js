@@ -11,8 +11,12 @@ export default function getRefs() {
     searchForm: document.querySelector('.header__search-form'),
     searchInput: document.querySelector('.header__search-input'),
     headerButton: document.querySelector('.header__button'),
+    sortWraper: document.querySelector('.header__drop-btn'),
 
     // --- GALLERY ---
+    sliderTitle: document.querySelector('.slider-title'),
+    sliderContainer: document.querySelector('.slider-wrapper'),
+    sliderWraper: document.querySelector('.js-slider-container'),
     galleryList: document.querySelector('.gallery__list'),
     // --- Modal ---
     modalСardRef: document.querySelector('.modal-form__card'), //modal.html
