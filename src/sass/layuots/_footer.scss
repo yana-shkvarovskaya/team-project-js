@@ -96,8 +96,8 @@
 
   &:hover {
     transform: scale(1.01);
-    color: rgba(255, 13, 190, 0.884);
-    text-shadow: 3px 3px 5px rgb(220, 86, 198);
+    color: rgba(247, 161, 3, 0.884);
+    // text-shadow: 3px 3px 5px rgb(49, 30, 46);
 
     animation: shake 500ms ease-in-out forwards;
   }
@@ -118,4 +118,3 @@
     transform: rotate(0deg);
   }
 }
-

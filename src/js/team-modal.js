@@ -20,8 +20,7 @@ openTeamModal.addEventListener('click', e => {
   });
 });
 
-// const btnModal = document.querySelector(".btn-modal");
-// console.log(btnModal);
+
 
 
 
