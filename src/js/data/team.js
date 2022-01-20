@@ -1,6 +1,10 @@
 import img1 from '../../images/team/Yana_Shkvarovskaya.jpg';
 import img2 from '../../images/team/Anna_Popova.jpg';
 import img3 from '../../images/team/Evgeniya_Gorlach.jpg';
+import img4 from '../../images/team/Tetiana_Legois.jpg';
+import img5 from '../../images/team/Anna_Rak.jpg';
+import img6 from '../../images/team/Anastasiia_Zubko.jpg';
+import img7 from '../../images/team/Hanna_Cherednychenko.jpg';
 
 export default [
   {
@@ -26,6 +30,17 @@ export default [
     mail: 'mailto:popovaa769@gmail.com',
   },
   {
+    fullName: 'TETIANA LEGOIS',
+    firstName: 'TETIANA',
+    secondName: 'LEGOIS',
+    position: 'Developer',
+    photo: img4,
+    linkedIn: 'https://www.linkedin.com/in/tetiana-legois-a17469203/',
+    gitHub: 'https://github.com/mmeTanya',
+    telegram: '#',
+    mail: 'mailto:mme.tanyalegois@gmail.com',
+  },
+  {
     fullName: 'EVGENIYA GORLACH',
     firstName: 'EVGENIYA',
     secondName: 'GORLACH',
@@ -36,48 +51,39 @@ export default [
     telegram: 'https://t.me/ZhenyaGorlach',
     mail: 'mailto:gorlachjob@ukr.net',
   },
-  {
-    fullName: 'HANNA CHEREDNYCHENKO',
-    firstName: 'HANNA',
-    secondName: 'CHEREDNYCHENKO',
-    position: 'Developer',
-    photo: img3,
-    linkedIn: '#',
-    gitHub: '#',
-    telegram: '#',
-    mail: 'mailto:anangelann@gmail.com',
-  },
+
   {
     fullName: 'ANN RAK',
     firstName: 'ANN',
     secondName: 'RAK',
     position: 'Developer',
-    photo: img3,
+    photo: img5,
     linkedIn: 'https://www.linkedin.com/mwlite/in/hanna-rak-590524167',
     gitHub: 'https://github.com/Hanna88-A?tab=repositories',
     telegram: '#',
     mail: 'mailto:annamukolaivna88@gmail.com',
   },
-  {
-    fullName: 'TETIANA LEGOIS',
-    firstName: 'TETIANA',
-    secondName: 'LEGOIS',
-    position: 'Developer',
-    photo: img3,
-    linkedIn: 'https://www.linkedin.com/in/tetiana-legois-a17469203/',
-    gitHub: 'https://github.com/mmeTanya',
-    telegram: '#',
-    mail: 'mailto:mme.tanyalegois@gmail.com',
-  },
+
   {
     fullName: 'ANASTASIIA ZUBKO',
     firstName: 'ANASTASIIA',
     secondName: 'ZUBKO',
     position: 'Developer',
-    photo: img3,
+    photo: img6,
     linkedIn: '#',
     gitHub: '#',
     telegram: '#',
     mail: 'mailto:lockassistd@gmail.com',
+  },
+  {
+    fullName: 'HANNA CHEREDNYCHENKO',
+    firstName: 'HANNA',
+    secondName: 'CHEREDNYCHENKO',
+    position: 'Developer',
+    photo: img7,
+    linkedIn: '#',
+    gitHub: '#',
+    telegram: '#',
+    mail: 'mailto:anangelann@gmail.com',
   },
 ];
