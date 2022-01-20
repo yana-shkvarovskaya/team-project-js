@@ -11,10 +11,10 @@
 
   overflow: hidden;
 
-  background-color: rgba(32, 13, 29, 0.5);
+  background-color: rgba(2, 2, 2, 0.5);
 
-  border-radius: 20px;
-  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5);
+  // border-radius: 20px;
+  box-shadow: 0 0 2.5rem rgba(10, 10, 9, 0.5);
 
   transform: translate(-50%, -50%);
   transition: width 0.5s ease 0.5s, height 0.5s ease;
@@ -61,7 +61,7 @@
 
     &:before,
     &:after {
-      background-color: rgb(255, 13, 191);
+      background-color: rgb(255, 158, 13);
     }
   }
 }
@@ -121,10 +121,10 @@
   text-align: center;
   line-height: 1.4em;
 
-  border: 1px solid rgb(255, 13, 191);
-  border-radius: 20px;
+  border: 1px solid rgb(238, 137, 5);
+  // border-radius: 20px;
   background-color: rgba(88, 87, 87, 0.5);
-  box-shadow: 4px 4px 10px 1px rgba(220, 86, 198, 0.295);
+  box-shadow: 4px 4px 10px 1px rgb(238, 137, 5);
 
   &:hover,
   &:focus {
@@ -135,26 +135,26 @@
   }
 }
 
-.team__card figcaption {
-  width: 100%;
-  padding: 15px 25px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-}
+// .team__card figcaption {
+//   width: 100%;
+//   padding: 15px 25px;
+//   position: absolute;
+//   left: 0;
+//   top: 50%;
+// }
 
 .profile {
-  border-radius: 20px;
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
+  // border-radius: 20px;
+  // position: absolute;
+  // // bottom: 50%;
+  // left: 50%;
   object-fit: cover;
-  width: 110px;
-  height: 120px;
-  box-shadow: 0px 3px 5px #e0a5d788;
+  // width: 110px;
+  // height: 120px;
+  // box-shadow: 0px 3px 5px #e0a5d788;
   border: 1px solid rgba(255, 255, 255, 0.473);
-  -webkit-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
+  // -webkit-transform: translate(-50%, 0%);
+  // transform: translate(-50%, 0%);
 }
 
 .team__card h3 {
@@ -186,3 +186,123 @@
 .icons a {
   text-decoration: none;
 }
+
+// bjbjb
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-modal {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  overflow: hidden;
+}
+.container-modal:before {
+  content: '';
+  position: absolute;
+  left: 170%;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(45deg);
+  transition: 0.8s;
+}
+.container-modal:hover:before {
+  left: -170%;
+  transition-delay: 0.8s;
+}
+.container-modal img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition: 1s;
+}
+.container-modal:hover img {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+.container-modal h2 {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  color: #272727;
+  bottom: 0;
+  line-height: 40px;
+  transition: 0.5s;
+  transform: perspective(300px) rotateX(90deg);
+  transform-origin: bottom;
+}
+.container-modal:hover h2 {
+  transform: perspective(300px) rotateX(0deg);
+}
+.container-modal-ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container-modal-li {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transform: perspective(1000px) rotateY(90deg);
+  transition: 0.5s;
+  transform-origin: left;
+}
+.container-modal ul li .fa {
+  color: #272727;
+}
+.container-modal:hover ul li {
+  transform: rotateX(0deg);
+}
+.container-modal ul li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.container-modal ul li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.container-modal ul li:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+/* _______typing_______ */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 28ch;
+  animation: typing 2s steps(10), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* ___________________ */
