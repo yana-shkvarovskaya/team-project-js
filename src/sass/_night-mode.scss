@@ -1,14 +1,16 @@
 :root {
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  // background: #ece9e6; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #ffffff, #ece9e6);
   background: linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // background: -webkit-linear-gradient(90deg, #edefee, #c9c9c9);
-  // background: linear-gradient(90deg, #edefee, #c9c9c9);
+    92.7deg,
+    rgb(224, 203, 185) 8.5%,
+    rgb(247, 246, 214) 40.2%,
+    rgb(226, 193, 164) 85.5%
+  );
+  .footer-wrapper {
+    background: linear-gradient(92.7deg, rgb(247, 246, 214) 8.5%, rgb(224, 203, 185) 90.2%);
+  }
 }
 
 :root[data-theme='dark'] {

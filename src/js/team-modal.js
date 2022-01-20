@@ -19,3 +19,10 @@ openTeamModal.addEventListener('click', e => {
     teamModal.classList.add('is-hidden');
   });
 });
+
+
+
+
+
+
+

@@ -28,6 +28,17 @@ export default class API {
     }
   }
 
+  async fetchMovieLatest() {
+    try {
+      const response = await axios.get(`/movie/now_playing`);
+      const data = await response.data;
+      this.totalResults = data.total_results;
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   // Информация о жанрах
   async fetchMovieGenre() {
     try {
