@@ -1,14 +1,12 @@
-
 import img1 from '../../images/team/Yana_Shkvarovskaya.jpg';
 import img2 from '../../images/team/Anna_Popova.jpg';
 import img3 from '../../images/team/Evgeniya_Gorlach.jpg';
 
-
 export default [
   {
-    fullName: 'Yana Shkvarovskaya',
-    firstName: 'Yana',
-    secondName: 'Shkvarovskaya',
+    fullName: 'YANA SHKVAROVSKAYA',
+    firstName: 'YANA',
+    secondName: 'SHKVAROVSKAYA',
     position: 'Team Lead',
     photo: img1,
     linkedIn: 'https://www.linkedin.com/in/yana-shkvarovskaya-4b4a63229/',
@@ -17,9 +15,9 @@ export default [
     mail: 'mailto:shkvarovskayayana@gmail.com',
   },
   {
-    fullName: 'Anna Popova',
-    firstName: 'Anna',
-    secondName: 'Popova',
+    fullName: 'ANNA POPOVA',
+    firstName: 'ANNA',
+    secondName: 'POPOVA',
     position: 'Scrum master',
     photo: img2,
     linkedIn: 'https://www.linkedin.com/in/anna-popova-381490222/',
@@ -28,9 +26,9 @@ export default [
     mail: 'mailto:popovaa769@gmail.com',
   },
   {
-    fullName: 'Evgeniya Gorlach',
-    firstName: 'Evgeniya',
-    secondName: 'Gorlach',
+    fullName: 'EVGENIYA GORLACH',
+    firstName: 'EVGENIYA',
+    secondName: 'GORLACH',
     position: 'Developer',
     photo: img3,
     linkedIn: 'https://www.linkedin.com/in/yevheniia-horlach-026771216/',
@@ -39,9 +37,9 @@ export default [
     mail: 'mailto:gorlachjob@ukr.net',
   },
   {
-    fullName: 'Hanna Cherednychenko',
-    firstName: 'Hanna',
-    secondName: 'Cherednychenko',
+    fullName: 'HANNA CHEREDNYCHENKO',
+    firstName: 'HANNA',
+    secondName: 'CHEREDNYCHENKO',
     position: 'Developer',
     photo: img3,
     linkedIn: '#',
@@ -50,9 +48,9 @@ export default [
     mail: 'mailto:anangelann@gmail.com',
   },
   {
-    fullName: 'Ann Rak',
-    firstName: 'Ann',
-    secondName: 'Rak',
+    fullName: 'ANN RAK',
+    firstName: 'ANN',
+    secondName: 'RAK',
     position: 'Developer',
     photo: img3,
     linkedIn: 'https://www.linkedin.com/mwlite/in/hanna-rak-590524167',
@@ -61,9 +59,9 @@ export default [
     mail: 'mailto:annamukolaivna88@gmail.com',
   },
   {
-    fullName: 'Tetiana Legois',
-    firstName: 'Tetiana',
-    secondName: 'Legois',
+    fullName: 'TETIANA LEGOIS',
+    firstName: 'TETIANA',
+    secondName: 'LEGOIS',
     position: 'Developer',
     photo: img3,
     linkedIn: 'https://www.linkedin.com/in/tetiana-legois-a17469203/',
@@ -72,9 +70,9 @@ export default [
     mail: 'mailto:mme.tanyalegois@gmail.com',
   },
   {
-    fullName: 'Anastasiia Zubko',
-    firstName: 'Anastasiia',
-    secondName: 'Zubko',
+    fullName: 'ANASTASIIA ZUBKO',
+    firstName: 'ANASTASIIA',
+    secondName: 'ZUBKO',
     position: 'Developer',
     photo: img3,
     linkedIn: '#',
