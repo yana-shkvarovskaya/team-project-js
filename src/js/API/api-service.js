@@ -55,7 +55,9 @@ export default class API {
 
   async fetchMovieFilterGenre() {
     try {
-      const response = await axios.get(`discover/movie?&page=${this.page}`);
+      const response = await axios.get(
+        `discover/movie?&page=${this.page}&sort_by=popularity.desc&include_adult=false`,
+      );
       const data = await response.data;
       this.totalResults = data.total_results;
       return data;
