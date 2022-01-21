@@ -6,17 +6,11 @@ import { startSpinner, stopSpinner } from './preloader';
 import { paginationSetTotalItems } from '../components/pagination';
 import createCardData from '../data/create-card-data';
 
-const refs = {
-  searchForm: document.querySelector('.header__search-form'),
-  /* insertPoint: document.querySelector('.gallery__list'), */
-  preloader: document.querySelector('.preloader'),
-};
-
-const { galleryList, paginationBox } = getRefs();
+const { searchForm, preloader, galleryList, paginationBox } = getRefs();
 export let searchBy = '';
 const api = new API();
 
-refs.searchForm.addEventListener('submit', onSearchInput);
+searchForm.addEventListener('submit', onSearchInput);
 
 export async function onSearchInput(e) {
   e.preventDefault();
@@ -41,7 +35,6 @@ export async function onSearchInput(e) {
       paginationSetTotalItems(data.total_results);
       paginationBox.classList.remove('visually-hidden');
     }
-    /* refs.insertPoint.insertAdjacentHTML('beforeend', card(markup)); */
     galleryList.insertAdjacentHTML('beforeend', card(markup));
     searchBy = 'query';
     stopSpinner();
@@ -51,7 +44,6 @@ export async function onSearchInput(e) {
 }
 
 function initialReset() {
-  /* refs.insertPoint.innerHTML = ''; */
   galleryList.innerHTML = '';
   searchErr(false);
   api.setPage(1);

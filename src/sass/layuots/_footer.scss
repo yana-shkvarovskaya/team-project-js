@@ -3,8 +3,6 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  // position: absolute;
-  // bottom: -88px;
   padding-top: 30px;
   padding-bottom: 28px;
   background-color: $secondary-bg-color;
@@ -70,16 +68,12 @@
 }
 
 .footer-go {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
-    sans-serif;
   color: black;
   font-weight: 600;
   margin-right: -4px;
 }
 
 .footer-it {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
-    sans-serif;
   color: rgb(230, 105, 22);
   font-weight: 600;
   margin-right: 4px;
@@ -97,7 +91,6 @@
   &:hover {
     transform: scale(1.01);
     color: rgba(247, 161, 3, 0.884);
-    // text-shadow: 3px 3px 5px rgb(49, 30, 46);
 
     animation: shake 500ms ease-in-out forwards;
   }

@@ -1,5 +1,3 @@
-// const preloader = document.querySelector('.preloader');
-
 import getRefs from '../refs';
 
 const { preloader, sliderContainer } = getRefs();

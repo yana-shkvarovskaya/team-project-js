@@ -12,7 +12,6 @@ const {
   overlayRef,
   clsBtnRef,
   sliderWraper,
-  //libraryLink,
 } = getRefs();
 let movieID;
 

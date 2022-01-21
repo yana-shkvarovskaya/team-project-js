@@ -3,7 +3,6 @@ import apiAuthorization from './api-authorization';
 
 const axios = require('axios').default;
 
-// console.log(axios);
 axios.defaults.baseURL = ACCESS.BASE_URL;
 axios.defaults.headers.common.Authorization = ACCESS.API_KEY;
 

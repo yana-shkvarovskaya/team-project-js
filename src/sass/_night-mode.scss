@@ -4,20 +4,10 @@
   // background: linear-gradient(to right, #ffffff, #ece9e6);
   background: linear-gradient(
     92.7deg,
-    rgb(224, 203, 185) 8.5%,
-    rgb(247, 246, 214) 40.2%,
-    rgb(226, 193, 164) 85.5%
+    rgba(226, 215, 205, 0.767) 8.5%,
+    rgba(219, 219, 198, 0.733) 40.2%,
+    rgba(224, 200, 179, 0.747) 85.5%
   );
-  .footer-wrapper {
-    background: linear-gradient(92.7deg, rgb(247, 246, 214) 8.5%, rgb(224, 203, 185) 90.2%);
-  }
-}
-
-:root[data-theme='dark'] {
-  background-color: rgb(34, 29, 8);
-  background: linear-gradient(90deg, #181616 20%, #3f2b2b 50%, #0f0e0e 80%);
-  color: white;
-
   @mixin dots($count) {
     $text-shadow: ();
     @for $i from 0 through $count {
@@ -80,6 +70,15 @@
       transform: rotate(360deg) scale(18) translateX(20px);
     }
   }
+  .footer-wrapper {
+    background: linear-gradient(92.7deg, rgb(247, 246, 214) 8.5%, rgb(224, 203, 185) 90.2%);
+  }
+}
+
+:root[data-theme='dark'] {
+  background-color: rgb(34, 29, 8);
+  background: linear-gradient(90deg, #181616 20%, #3f2b2b 50%, #0f0e0e 80%);
+  color: white;
 
   .night-mode-btn {
     color: $white-text-color;

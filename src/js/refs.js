@@ -12,8 +12,17 @@ export default function getRefs() {
     searchInput: document.querySelector('.header__search-input'),
     headerButton: document.querySelector('.header__button'),
     sortWraper: document.querySelector('.header__drop-btn'),
-
+    decrBtn: document.querySelector('.header__increase-btn'),
+    incrBtn: document.querySelector('.header__decrease-btn'),
+    releaseDecrBtn: document.querySelector('.header__asc-btn'),
+    releaseIncrBtn: document.querySelector('.header__desc-btn'),
+    nav: document.querySelector('#nav'),
+    menuWrapper: document.querySelector('.header__wrapper'),
+    menuBar: document.querySelector('.header__menu-bar'),
+    ratingItem: document.querySelector('.header__rating-item'),
+    releaseItem: document.querySelector('.header__release-item'),
     // --- GALLERY ---
+    mainContainer: document.querySelector('.main'),
     sliderTitle: document.querySelector('.slider-title'),
     sliderContainer: document.querySelector('.slider-wrapper'),
     sliderWraper: document.querySelector('.js-slider-container'),
@@ -27,18 +36,13 @@ export default function getRefs() {
     paginationBox: document.getElementById('tui-pagination-container'),
     // ---SCROLL-TOP---
     topBtn: document.querySelector('.scroll-top'),
-
     // ---PRELOADER---
     preloader: document.querySelector('.preloader'),
-
     // ---NIGHT MODE---
     nightModeBtn: document.querySelector('.night-mode-btn'),
     lightIcon: document.querySelector('.fa-sun'),
     darkIcon: document.querySelector('.fa-moon'),
-
-    mainContainer: document.querySelector('.main'),
     // --- Footer ---
-    //footer-team-modal
     openTeamModal: document.querySelector('.footer-open-modal'),
     teamModal: document.querySelector('.team-modal'),
     btnCloseModal: document.querySelector('.close'),

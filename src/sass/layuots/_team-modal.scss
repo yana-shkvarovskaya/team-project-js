@@ -72,8 +72,11 @@
   text-align: center;
   margin-bottom: 15px;
 
-  // font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 22px;
+  font-size: 9px;
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
   color: white;
   text-shadow: 2px 3px 2px rgba(252, 120, 47, 0.5);
 }
@@ -137,26 +140,10 @@
   }
 }
 
-// .team__card figcaption {
-//   width: 100%;
-//   padding: 15px 25px;
-//   position: absolute;
-//   left: 0;
-//   top: 50%;
-// }
-
 .profile {
-  // border-radius: 20px;
-  // position: absolute;
-  // // bottom: 50%;
-  // left: 50%;
   object-fit: cover;
-  // width: 110px;
-  // height: 120px;
-  // box-shadow: 0px 3px 5px #e0a5d788;
+
   border: 1px solid rgba(255, 255, 255, 0.473);
-  // -webkit-transform: translate(-50%, 0%);
-  // transform: translate(-50%, 0%);
 }
 
 .team__card h3 {
@@ -189,13 +176,6 @@
   text-decoration: none;
 }
 
-// bjbjb
-// .center {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
 .container-modal {
   position: relative;
   width: 240px;
@@ -229,7 +209,7 @@
 }
 .container-modal h2 {
   position: absolute;
-  // background: #ffffff75;
+
   width: 100%;
   margin: 0;
   text-align: center;
@@ -257,7 +237,6 @@
   height: 40px;
   text-align: center;
   line-height: 40px;
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   transform: perspective(1000px) rotateY(90deg);
   transition: 0.5s;
   transform-origin: left;

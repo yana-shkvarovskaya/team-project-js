@@ -1,11 +1,17 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -21,55 +27,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-//Основные стили страницы
-//   .body{
-//       font-family: $main-font;
-//       letter-spacing: 0.04em;
-
-//       background-color: $main-bg-color;
-//       color: $main-text-color;
-//   }
-
-//   //Стили заголовков
-//   .title{
-//     font-family: $second-font;
-//   }
-
-//   .section__title{
-//       color: $text-title-color;
-//       line-height: 1.15;
-//       font-size: 34px;
-//       text-align: center;
-//       text-transform: uppercase;
-
-//       @media screen and (min-width: 768px){
-//         font-size: 48px;
-//       }
-
-//       @media screen and (min-width: 1280px) {
-//         font-size: 58px;
-//         line-height: 1.14;
-//       }
-//   }
-
-//   .section__label{
-//     color: $second-hero-bg-color;
-//     line-height: 1.17;
-//     font-size: 18px;
-//     text-align: center;
-//     text-transform: uppercase;
-
-//     @media screen and (min-width: 768px){
-//       font-size: 26px;
-//       line-height: 1.15;
-//     }
-
-//     @media screen and (min-width: 1280px) {
-//       font-size: 58px;
-//       line-height: 1.13;
-//     }
-//   }
 
 .main {
   flex: 1 1 auto;
@@ -138,30 +95,3 @@ img {
 textarea {
   resize: none;
 }
-
-// Общий стиль для модального окна
-// .modal {
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   box-shadow: 0px 5px 30px $main-hero-bg-color;
-//   border-radius: $hero-buttons-border;
-//   padding: 40px;
-//   text-align: center;
-
-//   @media screen and (max-width: 767px) {
-//     min-height: 609px;
-//     width: 90%;
-//   }
-
-//   @media screen and (min-width: 768px) {
-//     min-height: 609px;
-//     min-width: 450px;
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     height: 581px;
-//     width: 528px;
-//   }
-// }

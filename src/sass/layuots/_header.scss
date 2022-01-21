@@ -16,14 +16,12 @@
   right: -90px;
   top: 100px;
   width: 200px;
-  // background-color: white;
   color: $white-text-color;
   line-height: 30px;
   padding: 0 10px;
   border: 1px solid $white-text-color;
   border-radius: 5px;
   font-size: 14px;
-  // font-weight: 500;
   cursor: pointer;
 
   @media screen and (max-width: 767px) {
@@ -47,6 +45,10 @@
   position: absolute;
   top: 140px;
   right: -90px;
+  @media screen and (max-width: 767px) {
+    right: -130px;
+  }
+
   display: none;
   width: 200px;
   background-color: transparent;
@@ -88,7 +90,6 @@
 
   &:hover {
     color: $accent-color;
-    // background-color: $secondary-bg-color;
   }
 }
 
@@ -132,7 +133,6 @@
 
 // -----------------------------------------------
 .header__background-home {
-  // position: relative;
   background-image: url('../images/header-img.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -209,7 +209,6 @@
 }
 
 .header__background-library {
-  // position: relative;
   background-image: url('../images/header-library.jpg');
   background-size: cover;
   background-repeat: no-repeat;
