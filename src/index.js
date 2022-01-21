@@ -3,6 +3,7 @@ import './js/components/get-popular';
 import './js/components/swiper';
 import './js/components/drop-down';
 import './js/components/filter';
+import './js/components/filter-genre';
 import './js/components/search';
 import './js/team-modal';
 import './js/refs';
