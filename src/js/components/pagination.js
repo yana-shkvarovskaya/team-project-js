@@ -10,8 +10,7 @@ const axios = require('axios').default;
 
 const { paginationBox, searchInput, galleryList } = getRefs();
 let currentPage = 1;
-let value=''
-
+let value = '';
 
 let options = {
   totalItems: 0,
@@ -62,7 +61,7 @@ pagination.on('afterMove', event => {
     paginateForSearch(`/search/movie?&query=${value}&page=${currentPage}`);
   } else {
     console.log(searchBy);
-    paginateForSearch(`/trending/movie/day?page=${currentPage}`);
+    paginateForSearch(`/trending/movie/week?page=${currentPage}`);
   }
   return currentPage;
 });

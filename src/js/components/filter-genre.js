@@ -110,22 +110,24 @@ filterGenre.addEventListener('click', genreFilter);
 async function genreFilter(event) {
   paginationBox.classList.add('visually-hidden');
   clearGallery();
-  const name = event.target.dataset.name;
-  console.log(name);
   startSpinner();
   try {
-    const result = await api.fetchMovieFilterGenre();
+    let movieGenreId = event.target.dataset.name;
+    console.log(movieGenreId);
+    const result = await api.fetchMovieFilterGenre(movieGenreId);
     console.log(result);
     const results = await result.results;
     console.log(results);
-    const array = results.filter(({ genre_ids }) => genre_ids.includes(Number(name)));
+    const array = results.filter(({ genre_ids }) => genre_ids.includes(Number(movieGenreId)));
+    saveArrMoviesToLocalStorage(array);
+    const data = getArrMoviesFromLocalStorage();
 
-    console.log(array);
-    const markup = await createCardData(array);
+    console.log(data);
+    const markup = await createCardData(data);
 
     galleryList.insertAdjacentHTML('beforeend', card(markup));
-    if (array.length) {
-      paginationSetTotalItems(result.total_results);
+    if (data.length) {
+      paginationSetTotalItems(array.total_results);
       paginationBox.classList.remove('visually-hidden');
     }
     stopSpinner();
@@ -136,4 +138,12 @@ async function genreFilter(event) {
 
 export function clearGallery() {
   galleryList.innerHTML = '';
+}
+
+function saveArrMoviesToLocalStorage(arrMovies) {
+  localStorage.setItem('arr-current-movies', JSON.stringify(arrMovies));
+}
+function getArrMoviesFromLocalStorage() {
+  const savedArrMovies = localStorage.getItem('arr-current-movies');
+  return JSON.parse(savedArrMovies);
 }
