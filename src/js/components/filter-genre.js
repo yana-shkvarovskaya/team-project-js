@@ -4,6 +4,7 @@ import card from '../../templates/cardMovie';
 import createCardData from '../data/create-card-data';
 import { startSpinner, stopSpinner } from './preloader';
 import { paginationSetTotalItems } from '../components/pagination';
+
 const axios = require('axios').default;
 
 const { galleryList, paginationBox } = getRefs();
@@ -110,19 +111,21 @@ async function genreFilter(event) {
   paginationBox.classList.add('visually-hidden');
   clearGallery();
   const name = event.target.dataset.name;
+  console.log(name);
   startSpinner();
   try {
-    const result = await api.fetchMovieTrending();
+    const result = await api.fetchMovieFilterGenre();
     console.log(result);
     const results = await result.results;
+    console.log(results);
     const array = results.filter(({ genre_ids }) => genre_ids.includes(Number(name)));
 
     console.log(array);
     const markup = await createCardData(array);
 
     galleryList.insertAdjacentHTML('beforeend', card(markup));
-    if (array.length > 20) {
-      paginationSetTotalItems(array.length);
+    if (array.length) {
+      paginationSetTotalItems(result.total_results);
       paginationBox.classList.remove('visually-hidden');
     }
     stopSpinner();

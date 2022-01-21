@@ -53,6 +53,17 @@ export default class API {
     }
   }
 
+  async fetchMovieFilterGenre() {
+    try {
+      const response = await axios.get(`discover/movie?&page=${this.page}`);
+      const data = await response.data;
+      this.totalResults = data.total_results;
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   // Описание фильма по его id
   async fetchMovieDescription() {
     try {
