@@ -41,9 +41,9 @@ export default [
     mail: 'mailto:mme.tanyalegois@gmail.com',
   },
   {
-    fullName: 'EVGENIYA GORLACH',
-    firstName: 'EVGENIYA',
-    secondName: 'GORLACH',
+    fullName: 'YEVHENIIA HORLACH',
+    firstName: 'YEVHENIIA',
+    secondName: 'HORLACH',
     position: 'Developer',
     photo: img3,
     linkedIn: 'https://www.linkedin.com/in/yevheniia-horlach-026771216/',

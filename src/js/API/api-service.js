@@ -18,7 +18,7 @@ export default class API {
 
   async fetchMovieTrending() {
     try {
-      const response = await axios.get(`/trending/movie/day?page=${this.page}`);
+      const response = await axios.get(`/trending/movie/week?page=${this.page}`);
       const data = await response.data;
       this.totalResults = data.total_results;
       return data;
@@ -27,9 +27,9 @@ export default class API {
     }
   }
 
-  async fetchMovieLatest() {
+  async fetchMoviePopular() {
     try {
-      const response = await axios.get(`/movie/now_playing`);
+      const response = await axios.get(`/movie/popular`);
       const data = await response.data;
       this.totalResults = data.total_results;
       return data;

@@ -22,7 +22,7 @@ const api = new API();
 
 async function createMarkup() {
   try {
-    const result = await api.fetchMovieLatest();
+    const result = await api.fetchMoviePopular();
     console.log(result);
     const results = await result.results;
     const markup = await createCardData(results);
