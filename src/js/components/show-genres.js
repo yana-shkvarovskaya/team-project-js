@@ -12,3 +12,9 @@ function showGenres() {
 function hideGenres() {
   GenreBtns.classList.add('hideGenre');
 }
+
+let library = document.querySelector('#library-link');
+library.addEventListener('click', removeGenres);
+function removeGenres() {
+  showGenresBtn.classList.add('hideGenre');
+}

@@ -8,7 +8,13 @@
   position: absolute;
   display: flex;
   top: 33%;
-  right: 73%;
+  right: 79%;
+  @media screen and (max-width: 767px) {
+    right: 75%;
+  }
+  @media screen and (max-width: 480px) {
+    right: 82%;
+  }
 }
 
 .header__drop-btn {
@@ -309,9 +315,12 @@
   cursor: pointer;
   border: 1px solid $white-text-color;
 
-  // @media screen and (max-width: 767px) {
-  //   right: -130px;
-  // }
+  @media screen and (max-width: 767px) {
+    right: -430px;
+  }
+  @media screen and (max-width: 480px) {
+    right: -330px;
+  }
 
   &:hover {
     color: $accent-color;
@@ -349,11 +358,13 @@
 .filter-genre {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  height: 425px;
   margin-left: 10px;
   position: absolute;
-  right: -640px;
+  right: -750px;
   top: 140px;
-  width: 200px;
+  width: 385px;
   color: $white-text-color;
   line-height: 30px;
   padding: 0 10px;
@@ -365,12 +376,15 @@
   z-index: 1;
 
   @media screen and (max-width: 767px) {
-    right: -340px;
+    right: -500px;
+  }
+  @media screen and (max-width: 480px) {
+    right: -330px;
   }
 
   &:hover {
     color: $accent-color;
-    // border: 1px solid $accent-color;
+    border: 1px solid $accent-color;
   }
 }
 .showbtn {
