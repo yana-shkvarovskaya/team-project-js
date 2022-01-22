@@ -13,7 +13,7 @@
 
 .header__drop-btn {
   position: absolute;
-  right: -90px;
+  right: -250px;
   top: 100px;
   width: 200px;
   color: $white-text-color;
@@ -44,7 +44,7 @@
 .header__wrapper {
   position: absolute;
   top: 140px;
-  right: -90px;
+  right: -250px;
   @media screen and (max-width: 767px) {
     right: -130px;
   }
@@ -295,23 +295,27 @@
 }
 ///
 .filterDrop {
-  width: 180px;
+  position: absolute;
+  top: 100px;
+  right: -640px;
+  width: 200px;
   color: $white-text-color;
   line-height: 30px;
-  padding: 0;
+  padding: 0 10px;
   text-align: left;
-  border: none;
   border-radius: 5px;
   font-size: 14px;
   background-color: transparent;
   cursor: pointer;
+  border: 1px solid $white-text-color;
 
-  @media screen and (max-width: 767px) {
-    right: -130px;
-  }
+  // @media screen and (max-width: 767px) {
+  //   right: -130px;
+  // }
 
   &:hover {
     color: $accent-color;
+    border: 1px solid $accent-color;
   }
 }
 .filterDrop i {
@@ -322,7 +326,6 @@
   cursor: pointer;
 }
 .genreBtn {
-  display: none;
   width: 180px;
   color: $white-text-color;
   line-height: 30px;
@@ -347,9 +350,9 @@
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  position: relative;
-  right: -300px;
-  top: 100px;
+  position: absolute;
+  right: -640px;
+  top: 140px;
   width: 200px;
   color: $white-text-color;
   line-height: 30px;
@@ -367,9 +370,13 @@
 
   &:hover {
     color: $accent-color;
-    border: 1px solid $accent-color;
+    // border: 1px solid $accent-color;
   }
 }
 .showbtn {
   display: block;
+}
+
+.hideGenre {
+  display: none;
 }

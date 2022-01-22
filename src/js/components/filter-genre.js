@@ -1,4 +1,4 @@
- import API from '../API/api-service';
+import API from '../API/api-service';
 import getRefs from '../refs';
 import card from '../../templates/cardMovie';
 import createCardData from '../data/create-card-data';
@@ -91,6 +91,7 @@ const genres = [
 ];
 const filterGenre = document.querySelector('.filter-genre');
 const buttonsCreated = onCreateButtons(genres);
+let genreBtn = document.querySelector('.genreBtn');
 
 /* const genresArray = JSON.parse(genres);
 console.log(genresArray); */
@@ -98,7 +99,10 @@ console.log(genresArray); */
 function onCreateButtons(genres) {
   return genres
     .map(genre => {
-      return `<button type='button' data-name='${genre.id}' class="genreBtn hideGenre">${genre.name}</button>`;
+      return `
+      
+      <button type='button' data-name='${genre.id}' class="genreBtn">${genre.name}</button>
+      `;
     })
     .join('');
 }
@@ -137,6 +141,3 @@ async function genreFilter(event) {
 export function clearGallery() {
   galleryList.innerHTML = '';
 }
-
-
-
