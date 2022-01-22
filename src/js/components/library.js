@@ -2,6 +2,7 @@ import getRefs from '../refs';
 import card from '../../templates/cardMovie.hbs';
 import { paginationSetTotalItems } from '../components/pagination';
 
+
 export let currentStorage = '';
 const {
   libraryLink,
@@ -16,6 +17,7 @@ const {
   sliderContainer,
   sortWraper,
   mainContainer,
+  filterGenre
 } = getRefs();
 
 btnWatched.addEventListener('click', watchedStorage);
@@ -23,6 +25,7 @@ btnQueue.addEventListener('click', queuedStorage);
 libraryLink.addEventListener('click', openLibrary);
 
 function openLibrary() {
+  filterGenre.classList.add('visually-hidden');
   galleryList.innerHTML = '';
   header.classList.replace('header__background-home', 'header__background-library');
   homeLink.classList.remove('active', 'header__home--current');

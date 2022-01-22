@@ -26,6 +26,7 @@ export default function getRefs() {
     sliderTitle: document.querySelector('.slider-title'),
     sliderContainer: document.querySelector('.slider-wrapper'),
     sliderWraper: document.querySelector('.js-slider-container'),
+    filterGenre: document.querySelector('.filter-genre'),
     galleryList: document.querySelector('.gallery__list'),
     // --- Modal ---
     modalСardRef: document.querySelector('.modal-form__card'), //modal.html
