@@ -89,6 +89,7 @@ const genres = [
 ];
 
 const buttonsCreated = onCreateButtons(genres);
+let genreBtn = document.querySelector('.genreBtn');
 
 /* const genresArray = JSON.parse(genres);
 console.log(genresArray); */
@@ -96,7 +97,10 @@ console.log(genresArray); */
 function onCreateButtons(genres) {
   return genres
     .map(genre => {
-      return `<button type='button' data-name='${genre.id}' class="genreBtn">${genre.name}</button>`;
+      return `
+      
+      <button type='button' data-name='${genre.id}' class="genreBtn">${genre.name}</button>
+      `;
     })
     .join('');
 }
