@@ -131,7 +131,10 @@
 
 .night-mode-btn {
   position: fixed;
-  top: 173px;
+  top: 70px;
+  @media screen and (min-width: 426px) {
+    top: 138px;
+  }
   right: 0;
   padding: 3px 7px;
   cursor: pointer;
