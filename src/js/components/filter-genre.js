@@ -5,9 +5,7 @@ import createCardData from '../data/create-card-data';
 import { startSpinner, stopSpinner } from './preloader';
 import { paginationSetTotalItems } from '../components/pagination';
 
-const axios = require('axios').default;
-
-const { galleryList, paginationBox } = getRefs();
+const { galleryList, paginationBox, filterGenre } = getRefs();
 
 const api = new API();
 
@@ -89,7 +87,7 @@ const genres = [
     name: 'Western',
   },
 ];
-const filterGenre = document.querySelector('.filter-genre');
+
 const buttonsCreated = onCreateButtons(genres);
 
 /* const genresArray = JSON.parse(genres);
@@ -107,43 +105,52 @@ filterGenre.insertAdjacentHTML('beforeend', buttonsCreated);
 
 filterGenre.addEventListener('click', genreFilter);
 
+export let filteredBy = '';
+export let movieGenreId = '';
+
 async function genreFilter(event) {
   paginationBox.classList.add('visually-hidden');
   clearGallery();
   startSpinner();
   try {
-    let movieGenreId = event.target.dataset.name;
+    movieGenreId = event.target.dataset.name;
     console.log(movieGenreId);
-    const result = await api.fetchMovieFilterGenre(movieGenreId);
+    const result = await api.fetchMovieFilterGenre(movieGenreId, 1);
     console.log(result);
     const results = await result.results;
     console.log(results);
     const array = results.filter(({ genre_ids }) => genre_ids.includes(Number(movieGenreId)));
+    console.log(array);
     saveArrMoviesToLocalStorage(array);
     const data = getArrMoviesFromLocalStorage();
-
     console.log(data);
     const markup = await createCardData(data);
 
     galleryList.insertAdjacentHTML('beforeend', card(markup));
-    if (data.length) {
-      paginationSetTotalItems(array.total_results);
+    if (result.total_results > 20) {
+      if (result.total_results > 9980) {
+        // на сайте написано, что макс количество страниц  меньше 500
+        paginationSetTotalItems(9980);
+      } else {
+        paginationSetTotalItems(result.total_results);
+      }
       paginationBox.classList.remove('visually-hidden');
     }
     stopSpinner();
+    filteredBy = 'genre';
   } catch (error) {
     console.error(error);
   }
 }
 
-export function clearGallery() {
+function clearGallery() {
   galleryList.innerHTML = '';
 }
 
-function saveArrMoviesToLocalStorage(arrMovies) {
+export function saveArrMoviesToLocalStorage(arrMovies) {
   localStorage.setItem('arr-current-movies', JSON.stringify(arrMovies));
 }
-function getArrMoviesFromLocalStorage() {
+export function getArrMoviesFromLocalStorage() {
   const savedArrMovies = localStorage.getItem('arr-current-movies');
   return JSON.parse(savedArrMovies);
 }
