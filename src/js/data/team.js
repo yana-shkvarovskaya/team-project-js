@@ -81,9 +81,9 @@ export default [
     secondName: 'CHEREDNYCHENKO',
     position: 'Developer',
     photo: img7,
-    linkedIn: '#',
-    gitHub: '#',
-    telegram: '#',
+    linkedIn: 'https://www.linkedin.com/in/hanna-cherednychenko-90309284/',
+    gitHub: 'https://github.com/anangelann',
+    telegram: 'https://t.me/Anangelann',
     mail: 'mailto:anangelann@gmail.com',
   },
 ];
