@@ -15,7 +15,7 @@ export default [
     photo: img1,
     linkedIn: 'https://www.linkedin.com/in/yana-shkvarovskaya-4b4a63229/',
     gitHub: 'https://github.com/yana-shkvarovskaya',
-    telegram: '#',
+    telegram: 'https://t.me/yana_shkvarovskaya',
     mail: 'mailto:shkvarovskayayana@gmail.com',
   },
   {
@@ -37,7 +37,7 @@ export default [
     photo: img4,
     linkedIn: 'https://www.linkedin.com/in/tetiana-legois-a17469203/',
     gitHub: 'https://github.com/mmeTanya',
-    telegram: '#',
+    telegram: 'https://t.me/mme_tanya',
     mail: 'mailto:mme.tanyalegois@gmail.com',
   },
   {
@@ -60,7 +60,7 @@ export default [
     photo: img5,
     linkedIn: 'https://www.linkedin.com/mwlite/in/hanna-rak-590524167',
     gitHub: 'https://github.com/Hanna88-A?tab=repositories',
-    telegram: '#',
+    telegram: 'https://t.me/HannaNM88',
     mail: 'mailto:annamukolaivna88@gmail.com',
   },
 
@@ -70,9 +70,9 @@ export default [
     secondName: 'ZUBKO',
     position: 'Developer',
     photo: img6,
-    linkedIn: '#',
-    gitHub: '#',
-    telegram: '#',
+    linkedIn: 'https://www.linkedin.com/in/anastasiia-zubko-a886921b0',
+    gitHub: 'https://github.com/Anastasiia-Zubko',
+    telegram: 'https://t.me/ray_ray_8',
     mail: 'mailto:lockassistd@gmail.com',
   },
   {
