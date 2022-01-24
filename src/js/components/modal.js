@@ -2,7 +2,7 @@ import getRefs from '../refs';
 import createModalFilm from '../data/create-modal.data';
 import modal from '../../templates/modal.hbs';
 import getTrailer from './get-trailer'; //добавляет ютуб ролик
-// import { currentStorage, changeStorage } from './library';
+import { currentStorage, changeStorage } from './library';
 
 const {
   galleryList,
@@ -12,6 +12,7 @@ const {
   overlayRef,
   clsBtnRef,
   sliderWraper,
+  libraryLink,
 } = getRefs();
 let movieID;
 
@@ -99,12 +100,11 @@ function setButtonView(movieID, btnRef) {
 
 function closeModal() {
   modalСardRef.innerHTML = '';
-  //themeSwitch.classList.remove('disabled');
   overlayBackgroundRef.classList.remove('is-open');
   overlayRef.classList.remove('is-open');
   clsBtnRef.removeEventListener('click', closeModal);
   overlayRef.removeEventListener('click', closeModal);
   window.removeEventListener('keydown', closeModal);
   localStorage.removeItem('ky');
-  // if (libraryLink.classList.contains('active')) changeStorage(currentStorage); //!!!!!
+  if (libraryLink.classList.contains('active')) changeStorage(currentStorage); 
 }
