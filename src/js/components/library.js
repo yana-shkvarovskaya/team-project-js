@@ -2,8 +2,7 @@ import getRefs from '../refs';
 import card from '../../templates/cardMovie.hbs';
 import { paginationSetTotalItems } from '../components/pagination';
 
-
-export let currentStorage = '';
+export let currentStorage;
 const {
   libraryLink,
   homeLink,
@@ -17,7 +16,7 @@ const {
   sliderContainer,
   sortWraper,
   mainContainer,
-  filterGenre
+  filterGenre,
 } = getRefs();
 
 btnWatched.addEventListener('click', watchedStorage);
@@ -73,8 +72,6 @@ export function changeStorage(value, number) {
   });
   if (items.length) {
     mainContainer.classList.remove('enabled');
+    galleryList.insertAdjacentHTML('beforeend', card(pageItems));
   }
-  /* let firstPageItems = items.slice(0, 20); */
-  /*  galleryList.insertAdjacentHTML('beforeend', card(firstPageItems)); */
-  galleryList.insertAdjacentHTML('beforeend', card(pageItems));
 }

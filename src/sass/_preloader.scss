@@ -3,10 +3,19 @@
 .preloader {
   position: fixed;
   top: 50%;
+
+  left: 36%;
+
+  @media screen and (min-width: 425px) {
+    left: 40%;
+  }
+  @media screen and (min-width: 768px) {
+    left: 44%;
+  }
   @media screen and (min-width: 1024px) {
     top: 70%;
+    left: 46%;
   }
-  left: 46%;
   width: 100px;
   height: 100px;
   display: flex;

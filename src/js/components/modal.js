@@ -2,7 +2,7 @@ import getRefs from '../refs';
 import createModalFilm from '../data/create-modal.data';
 import modal from '../../templates/modal.hbs';
 import getTrailer from './get-trailer'; //добавляет ютуб ролик
-// import { currentStorage, changeStorage } from './library';
+import { changeStorage, currentStorage } from '../components/library';
 
 const {
   galleryList,
@@ -12,6 +12,7 @@ const {
   overlayRef,
   clsBtnRef,
   sliderWraper,
+  libraryLink,
 } = getRefs();
 let movieID;
 
@@ -62,7 +63,6 @@ function onModalBtnClick(e) {
     if (e.target.classList.contains('btn--active'))
       deleteItemFromLibrary(e.target.dataset.lib, movieID);
     else addItemToLibrary(e.target.dataset.lib);
-    // addItemToLibraryFirebase(e.target.dataset.lib);
     setButtonView(movieID, e.target);
   }
 }
@@ -70,7 +70,6 @@ function onModalBtnClick(e) {
 function addItemToLocalStorage(res) {
   localStorage.setItem('ky', JSON.stringify(res));
 }
-//localStorage addItemToLibrary
 function addItemToLibrary(collection) {
   let arrLib = JSON.parse(localStorage.getItem(collection));
   if (!arrLib) arrLib = [];
@@ -99,12 +98,11 @@ function setButtonView(movieID, btnRef) {
 
 function closeModal() {
   modalСardRef.innerHTML = '';
-  //themeSwitch.classList.remove('disabled');
   overlayBackgroundRef.classList.remove('is-open');
   overlayRef.classList.remove('is-open');
   clsBtnRef.removeEventListener('click', closeModal);
   overlayRef.removeEventListener('click', closeModal);
   window.removeEventListener('keydown', closeModal);
   localStorage.removeItem('ky');
-  // if (libraryLink.classList.contains('active')) changeStorage(currentStorage); //!!!!!
+  if (libraryLink.classList.contains('active')) changeStorage(currentStorage, 1);
 }
