@@ -13,7 +13,7 @@ export default [
     secondName: 'SHKVAROVSKAYA',
     position: 'Team Lead',
     photo: img1,
-    linkedIn: 'https://www.linkedin.com/in/yana-shkvarovskaya-4b4a63229/',
+    linkedIn: 'https://www.linkedin.com/in/yana-shkvarovskaya',
     gitHub: 'https://github.com/yana-shkvarovskaya',
     telegram: 'https://t.me/yana_shkvarovskaya',
     mail: 'mailto:shkvarovskayayana@gmail.com',
