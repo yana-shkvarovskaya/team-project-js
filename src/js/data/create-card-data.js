@@ -1,4 +1,5 @@
 import API from '../API/api-service';
+import noImage from '../../images/no-image.png';
 
 const api = new API();
 
@@ -22,7 +23,7 @@ async function createCardData(result) {
       });
 
       const date = release_date ? release_date.slice(0, 4) : '';
-      const poster = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : '';
+      const poster = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : noImage;
 
       return {
         backdrop_path,

@@ -1,4 +1,5 @@
 import API from '../API/api-service';
+import noImage from '../../images/no-image.png';
 
 const api = new API();
 
@@ -26,7 +27,7 @@ async function createModalFilmData(id) {
     release_date,
   } = description;
 
-  const poster = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : '';
+  const poster = poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : noImage;
 
   const backdrop = backdrop_path ? `https://image.tmdb.org/t/p/w500${backdrop_path}` : poster;
 
